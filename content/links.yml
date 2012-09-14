@@ -1,0 +1,14 @@
+---
+links:
+  - name: Home
+    href: /
+
+  - name: RSS
+    href: /rss
+
+  - name: Archive
+    href: /archive
+
+  - name: About Me
+    href: /pages/about
+---

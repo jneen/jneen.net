@@ -1,0 +1,8 @@
+# sass
+.sass-cache
+
+# public folder
+/public
+
+# logs
+/log/
