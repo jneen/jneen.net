@@ -59,7 +59,7 @@ GEM
     redcarpet (2.1.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    rouge (0.1.1)
+    rouge (0.2.1)
       thor
     rubyzip (0.9.9)
     sass (3.2.1)
@@ -97,7 +97,7 @@ DEPENDENCIES
   rake-pipeline!
   rake-pipeline-web-filters!
   redcarpet
-  rouge (~> 0.1.1)
+  rouge (~> 0.2.1)
   sass
   sinatra
   sinatra-reloader
