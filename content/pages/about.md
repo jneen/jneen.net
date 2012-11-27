@@ -7,6 +7,11 @@ I'm a [hacker][github], a systems engineer, a musician, and a student of nonviol
 [github]: https://github.com/jayferd
 
 ## Code I've written
+* [parsimmon][]
+  Originally written as part of MathQuill, Parsimmon is a monadic parser combinator
+  library for javascript.  Written jointly with [Han Wei][].
+* [rouge][]
+  A syntax highlighter for Ruby, whose output is compatible with Pygments stylesheets.
 * [mathquill][]
   gui editable math in the browser.  This is a joint project with my good friend [Han Wei][].  Also, awesomesauce.
 * [pjs](http://github.com/jayferd/pjs)
@@ -24,6 +29,8 @@ I'm a [hacker][github], a systems engineer, a musician, and a student of nonviol
 [tnetstrings-ruby]: http://github.com/jayferd/tnetstrings-ruby
 [tnetstrings-js]: http://github.com/jayferd/tnetstrings-js
 [mathquill]: http://mathquill.com
+[parsimmon]: http://github.com/jayferd/parsimmon
+[rouge]: http://github.com/jayferd/rouge
 
 ## Contact
 * email (humans only, please): `jjmadkisson AT gmail DOT com`.  Please keep in mind that emails containing job offers will be immediately marked as spam.
