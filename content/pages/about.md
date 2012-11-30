@@ -2,7 +2,10 @@
 title: About Me
 ---
 
-I'm a [hacker][github], a systems engineer, a musician, and a student of nonviolence.  I'm currently traveling in Europe, and I am **not** currently looking for a job.  Emails containing job offers will be marked as spam.
+I'm a [hacker][github], a systems engineer, a musician, and a student of nonviolence.
+
+**NOTICE**: I'm currently traveling in Europe, and I am **not** currently looking for a job.  I also will never work for (or "informally connect with") any company unless it is a) a place where a good friend of mine works, or b) is using one of my open-source projects, or c) has a strong social-justice mission.  To save everyone time and emails, if you represent a company and cold-email me for any reason, please explain why your company fits one of these conditions.  **Any emails failing to do this will be marked as spam, no questions asked.**
+(Updated Friday, 30 Nov 2012)
 
 [github]: https://github.com/jayferd
 
