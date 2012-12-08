@@ -19,3 +19,6 @@
         %guid= url
         %comments= "#{url}#comments"
         %pubDate= post.published_at.rfc822
+        %content:encoded
+          :cdata
+            #{post.html}
