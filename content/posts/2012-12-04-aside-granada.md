@@ -4,3 +4,5 @@ title: 'aside: granada'
 ---
 
 Granada is a bit of a ghost town.  Most of the bars and shops in the downtown area are shuttered, and though everyone told me the night-life here is supposed to be awesome, the streets just feel very empty.
+
+UPDATE: Just kidding, I just hadn't made it to the right part of town yet. :)
