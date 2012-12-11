@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 # markdown with syntax highlighting
 gem 'redcarpet'
-gem 'rouge', '~> 0.1.1'
+gem 'rouge', '~> 0.2'
 
 # sinatra without the global magic
 gem 'sinatra', :require => 'sinatra/base'
