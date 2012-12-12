@@ -36,7 +36,7 @@ I'm a [hacker][github], a systems engineer, a musician, and a student of nonviol
 [rouge]: http://github.com/jayferd/rouge
 
 ## Contact
-* email (humans only, please): `jjmadkisson AT gmail DOT com`.  Please keep in mind that emails containing job offers will be immediately marked as spam.
-* facebook: [http://facebook.com/jay.adkisson](http://facebook.com/jay.adkisson)
+* email (humans only, please): `jjmadkisson AT gmail DOT com`.
+  When emailing me, please refer to the guidelines in the notice at the top of this page.
 
 [resume]: http://github.com/jayferd/resume#readme
