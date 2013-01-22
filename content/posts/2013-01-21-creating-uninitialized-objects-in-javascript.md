@@ -34,7 +34,7 @@ function isInstanceOf(obj, constructor) {
 
   // recursively look up the prototype chain for a match
   return (function checkPrototype(obj) {
-    if (obj.__proto__ == constructor.prototype) return true;
+    if (obj.__proto__ === constructor.prototype) return true;
     if (obj === Object.prototype) return false;
 
     return checkPrototype(obj.__proto__)
