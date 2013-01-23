@@ -7,7 +7,7 @@ date: 19 Jan 2013
 
 I'm going to start tithing to the [Rolling Jubilee][].  For some background, these people are buying debt on secondary markets (the same ones that caused the housing crash a few years ago), but instead of sending them to a debt collector, which is what's typically done, they simply forgive the debt.  This is an awesome idea and an awesome project.
 
-Because the debt they buy is "subprime", this means two things: first, they can buy it cheaply (they say $1 for $20 of debt), and second, it's probably not "luxury debt".  Most likely, this debt is from loans used to pay for housing and medical expenses.  And from David Graeber's book *Debt: the first 5,000 years*, its clear that debt taken under duress leads to Bad Things&copy;.  It encourages an additude of commodification -- desperate commodification.  A person with debt taken under duress is desperate to transform everything around them into money; often by violence.
+Because the debt they buy is "subprime", this means two things: first, they can buy it cheaply (they say $1 for $20 of debt), and second, it's probably not "luxury debt".  Most likely, this debt is from loans used to pay for housing and medical expenses.  And from David Graeber's book *Debt: the first 5,000 years*, its clear that debt taken under duress leads to Bad Things&copy;.  It encourages an attitude of commodification -- desperate commodification.  A person with debt taken under duress is desperate to transform everything around them into money; often by violence.
 
 <!--fold-->
 
