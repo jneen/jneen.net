@@ -70,7 +70,10 @@ Happy coding!
 
 --Jay
 
+[(discussion on HN)][hn]
+
 [__proto__]: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/proto "The __proto__ accessor"
 [coffeescript varargs]: http://coffeescript.org/documentation/docs/nodes.html#section-55 "Coffeescript vararg constructors"
 [pjs bare]: https://github.com/jayferd/pjs/blob/v3.0.0/src/p.js#L28 "Pjs Bare class"
 [pjs v3.0.0]: https://github.com/jayferd/pjs/tree/v3.0.0 "Pjs v3.0.0"
+[hn]: http://news.ycombinator.com/item?id=5106165
