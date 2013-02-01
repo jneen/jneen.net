@@ -20,10 +20,6 @@ I'm a [hacker][github], a systems engineer, a musician, and a student of nonviol
 * [pjs](http://github.com/jayferd/pjs)
   Classes for Javascript that you'd actually use.  Basically it's prototypes with the bad parts taken out.
 * [ry][], the simplest possible virtual environments for Ruby
-* [tnetstrings-ruby][], [tnetstrings-js][]
-  Implementations of the [tagged netstrings protocol](http://tnetstrings.org) for Ruby and Javascript.
-* [color.js](http://github.com/jayferd/color.js)
-  The missing JS color library
 
 All of these projects are supported on a volunteer-basis.  If you use any of these and would like to contribute, I accept tips through Gittip.  Thanks!
 
