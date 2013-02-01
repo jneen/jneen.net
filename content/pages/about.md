@@ -4,10 +4,8 @@ title: About Me
 
 I'm a [hacker][github], a systems engineer, a musician, and a student of nonviolence.
 
-**NOTICE**: I am looking for a job!  I live in South Berkeley, and I would prefer an arrangement such that I don't have to ride the BART into San Francisco 5 days a week.
-
-Also, I will never work for (or "informally connect with") any company unless it is a) a place where a good friend of mine works, or b) is using one of my open-source projects, or c) has a strong social-justice mission.  To save everyone time and emails, if you represent a company and email me for any reason, please explain why your company fits one of these conditions.  **Any emails failing to do this will be marked as spam, no questions asked.**
-(Updated Saturday, 15 Dec 2012)
+**NOTICE**: I will never work for (or "informally connect with") any company unless it is a) a place where a good friend of mine works, or b) is using one of my open-source projects, or c) has a strong social-justice mission.  To save everyone time and emails, if you represent a company and email me for any reason, please explain why your company fits one of these conditions.  **Any emails failing to do this will be marked as spam, no questions asked.**
+(Updated Friday, 1 Feb 2013)
 
 [github]: https://github.com/jayferd
 
@@ -26,8 +24,14 @@ Also, I will never work for (or "informally connect with") any company unless it
   Implementations of the [tagged netstrings protocol](http://tnetstrings.org) for Ruby and Javascript.
 * [color.js](http://github.com/jayferd/color.js)
   The missing JS color library
-* [iplogic](http://github.com/jayferd/iplogic),
-  an IPv4 swiss army chainsaw in ruby.
+
+All of these projects are supported on a volunteer-basis.  If you use any of these and would like to contribute, I accept tips through Gittip.  Thanks!
+
+<iframe style="border: 0; margin: 0; padding: 0;"
+        src="https://www.gittip.com/jayferd/widget.html"
+        width="48pt" height="22pt">
+</iframe>
+
 
 [Han Wei]: http://github.com/laughinghan
 [ry]: http://github.com/jayferd/ry
