@@ -8,9 +8,9 @@ end
 
 input 'assets' do
   match 'sass/*.sass' do
-    filter SassFilter
-    filter ConcatFilter, 'css/application.css'
+    sass
+    concat 'css/application.css'
   end
 
-  filter ConcatFilter
+  concat
 end
