@@ -13,12 +13,8 @@ gem 'haml'
 gem 'sass'
 gem 'compass'
 
-gem 'rake-pipeline',
-  :git => 'https://github.com/livingsocial/rake-pipeline',
-  :tag => '0.6.0'
-gem 'rake-pipeline-web-filters',
-  :git => 'https://github.com/wycats/rake-pipeline-web-filters',
-  :ref => '0.6.0'
+gem 'rake-pipeline', '~> 0.7.0'
+gem 'rake-pipeline-web-filters', '~> 0.7.0'
 
 gem 'json'
 
