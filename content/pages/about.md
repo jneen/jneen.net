@@ -38,7 +38,7 @@ All of these projects are supported on a volunteer-basis.  If you use any of the
 [rouge]: http://github.com/jayferd/rouge
 
 ## Contact
-* email (humans only, please): `jjmadkisson AT gmail DOT com`.
+* email (humans only, please): `jay AT jayferd DOT us`.
   When emailing me, please refer to the guidelines in the notice at the top of this page.
 
 [resume]: http://github.com/jayferd/resume#readme
