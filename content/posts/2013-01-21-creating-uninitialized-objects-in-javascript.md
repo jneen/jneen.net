@@ -30,15 +30,13 @@ function isInstanceOf(obj, constructor) {
   if (typeof constructor !== 'function') throw new TypeError;
   if (typeof obj !== 'object') throw new TypeError;
 
-  if (constructor === Object) return true;
-
-  // recursively look up the prototype chain for a match
-  return (function checkPrototype(obj) {
-    if (obj.__proto__ === constructor.prototype) return true;
+  // look up the prototype chain for a match
+  while (true) {
+    if (obj === constructor.prototype) return true;
     if (obj === Object.prototype) return false;
 
-    return checkPrototype(obj.__proto__)
-  })(obj);
+    obj = obj.__proto__;
+  }
 }
 ```
 
@@ -67,6 +65,8 @@ SubClass.prototype = create(BaseClass.prototype);
 [Coffeescript uses this approach][coffeescript varargs] when it needs to construct objects with varargs.  We've used a variation of this approach in the [latest version of pjs][pjs v3.0.0].  Pjs classes carry around [ready-made noop constructors][pjs bare] with the correct prototypes already set.  For a pjs class, if you want an empty instance of `MyClass`, just type `new MyClass.Bare`.
 
 Happy coding!
+
+EDIT: Simplified the `isInstanceOf` implementation
 
 --Jay
 
