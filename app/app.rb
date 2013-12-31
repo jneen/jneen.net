@@ -1,4 +1,5 @@
 load File.join(File.dirname(__FILE__), 'models.rb')
+load File.join(File.dirname(__FILE__), 'support.rb')
 
 class BlagApp < Sinatra::Application
   configure :development do
