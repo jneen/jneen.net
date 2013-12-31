@@ -23,7 +23,7 @@ SubClass.prototype = Object.create(BaseClass.prototype);
 
 But if you want to support older browsers, a different strategy is called for.
 
-It turns out, the Javascript runtime has no way of telling which constructor was used to create an object.  Its `instanceof` operator only looks at the prototype chain.  In environments supporting the [`__proto__` accessor][__proto__], we could implement `instanceof` ourselves:
+It turns out, the Javascript runtime has no way of telling which constructor was used to create an object.  Its `instanceof` operator only looks at the prototype chain.  In environments supporting [`Object.getPrototypeOf`][getPrototypeOf] we could implement `instanceof` ourselves:
 
 ``` js
 function isInstanceOf(obj, constructor) {
@@ -33,9 +33,9 @@ function isInstanceOf(obj, constructor) {
   // look up the prototype chain for a match
   while (true) {
     if (obj === constructor.prototype) return true;
-    if (obj === Object.prototype) return false;
+    if (obj === null) return false;
 
-    obj = obj.__proto__;
+    obj = Object.getPrototypeOf(obj);
   }
 }
 ```
@@ -72,8 +72,8 @@ EDIT: Simplified the `isInstanceOf` implementation
 
 [(discussion on HN)][hn]
 
-[__proto__]: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object/proto "The __proto__ accessor"
-[coffeescript varargs]: http://coffeescript.org/documentation/docs/nodes.html#section-55 "Coffeescript vararg constructors"
+[getPrototypeOf]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf "Object.getPrototypeOf"
+[coffeescript varargs]: http://coffeescript.org/documentation/docs/nodes.html#section-60 "Coffeescript vararg constructors"
 [pjs bare]: https://github.com/jayferd/pjs/blob/v3.0.0/src/p.js#L28 "Pjs Bare class"
 [pjs v3.0.0]: https://github.com/jayferd/pjs/tree/v3.0.0 "Pjs v3.0.0"
 [hn]: http://news.ycombinator.com/item?id=5106165
