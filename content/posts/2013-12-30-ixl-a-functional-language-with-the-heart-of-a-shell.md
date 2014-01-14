@@ -36,10 +36,10 @@ $list > map [ add 3 $ ]
 ]
 
 # lambda patterns
-+ sum = [ .nil => 0; .cons %h %t => sum $t > add $h ]
++ sum = [ .nil => 0; .cons (%h, %t) => sum $t > add $h ]
 # or better, using tuples and tail recursion
 + sum %list =
-  + sum-iter %n = [ .nil => $n; => .cons (%h, %t) => $t > sum-iter (add $h $n) ]
+  + sum-iter %n = [ .nil => $n; .cons (%h, %t) => $t > sum-iter (add $h $n) ]
   sum-iter $list 0
 
 # currying
