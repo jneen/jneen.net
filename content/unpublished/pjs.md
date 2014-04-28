@@ -146,4 +146,4 @@ This is the core of the [pjs][pjs-src] framework.  It's simple, readable, and us
 
 [jr-inheritance]: http://ejohn.org/blog/simple-javascript-inheritance/
 [jr-instantiation]: http://ejohn.org/blog/simple-class-instantiation/
-[pjs-src]: https://github.com/jayferd/pjs/blob/master/src/p.js#L40
+[pjs-src]: https://github.com/jneen/pjs/blob/master/src/p.js#L40
