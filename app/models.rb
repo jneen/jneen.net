@@ -3,6 +3,7 @@ require 'bundler'
 Bundler.require
 
 require 'pathname'
+require 'yaml'
 
 module PathnameExtension
   def path_without_ext(rel=nil)
