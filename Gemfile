@@ -19,7 +19,7 @@ gem 'rake-pipeline-web-filters', '~> 0.7.0'
 gem 'json'
 
 gem 'i18n'
-gem 'activesupport', '~> 3.1', :require => 'active_support/all'
+gem 'activesupport', '~> 4.0', :require => 'active_support/all'
 
 group :development do
   gem 'sinatra-reloader'
