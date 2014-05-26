@@ -49,7 +49,7 @@ The templates are in the `templates/` directory.  They are written in a language
 [haml]: http://haml.info/
 
 ### Running the server
-To run the server, you will need a ruby environment.  I recommend installing via [ry](https://github.com/jayferd/ry).  Once you have that set up, open a terminal and run
+To run the server, you will need a ruby environment.  I recommend installing via [ry](https://github.com/jneen/ry).  Once you have that set up, open a terminal and run
 
 ```
 $ bundle install

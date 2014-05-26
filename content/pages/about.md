@@ -38,7 +38,7 @@ All of these projects are supported on a volunteer-basis.  If you use any of the
 [rouge]: http://github.com/jneen/rouge
 
 ## Contact
-* email (humans only, please): `jneen AT jayferd DOT us`.
+* email (humans only, please): `jneen AT jneen DOT us`.
   When emailing me, please refer to the guidelines in the notice at the top of this page.
 
 [resume]: http://github.com/jneen/resume#readme
