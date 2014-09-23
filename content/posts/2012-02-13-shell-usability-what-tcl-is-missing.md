@@ -49,7 +49,7 @@ read .fh
 
 What do you think?  What other considerations are there in optimizing a language for interactive use?
 
---Jay
+-- Jeanine
 
 [Discuss on HN][hn]
 

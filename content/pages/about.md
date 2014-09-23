@@ -24,15 +24,13 @@ I'm a [programmer][github], a musician, and a student of nonviolence.
 All of these projects are supported on a volunteer-basis.  If you use any of these and would like to contribute, I accept tips through Gittip.  Thanks!
 
 <iframe style="border: 0; margin: 0; padding: 0;"
-        src="https://www.gittip.com/jayferd/widget.html"
+        src="https://www.gittip.com/jneen/widget.html"
         width="48pt" height="22pt">
 </iframe>
 
 
 [Han Wei]: http://github.com/laughinghan
 [ry]: http://github.com/jneen/ry
-[tnetstrings-ruby]: http://github.com/jneen/tnetstrings-ruby
-[tnetstrings-js]: http://github.com/jneen/tnetstrings-js
 [mathquill]: http://mathquill.com
 [parsimmon]: http://github.com/jneen/parsimmon
 [rouge]: http://github.com/jneen/rouge

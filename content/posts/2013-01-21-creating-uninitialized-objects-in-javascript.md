@@ -68,7 +68,7 @@ Happy coding!
 
 EDIT: Simplified the `isInstanceOf` implementation
 
---Jay
+-- Jeanine
 
 [(discussion on HN)][hn]
 

@@ -142,7 +142,7 @@ This is the core of the [pjs][pjs-src] framework.  It's simple, readable, and us
 
 ............. Finish this post!
 
----Jay
+-- Jeanine
 
 [jr-inheritance]: http://ejohn.org/blog/simple-javascript-inheritance/
 [jr-instantiation]: http://ejohn.org/blog/simple-class-instantiation/

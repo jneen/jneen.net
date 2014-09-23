@@ -19,6 +19,6 @@ I don't know what the solution is, but this one isn't working.
 
 Since I'm one of those lucky people who was able to go to college on my parents' dime, I'm going to be doing my part to free people from these kinds of predatory loans.  When I start working again, I'll be taking $100 out of my paycheck every month to free someone from $2,000 of debt.
 
---Jay
+-- Jeanine
 
 [rolling jubilee]: http://rollingjubilee.org/ "The Rolling Jubilee"
