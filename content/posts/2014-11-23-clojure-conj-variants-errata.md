@@ -133,4 +133,4 @@ Thanks for reading and watching and pushing this further!  I think there's a lot
 
 jneen
 
-P.S. Comments seem to be broken - I'll look into that soon, but until then feel free to ping me [on twitter][https://twitter.com/jneen_].
+P.S. Comments seem to be broken - I'll look into that soon, but until then feel free to ping me [on twitter](https://twitter.com/jneen_).
