@@ -130,6 +130,33 @@ After the conj, an attendee confessed to being "confused about the difference be
 
 It's possible we need better terminology around this (which would influence the naming of `defvariant` and `defcase`).
 
+## in languages that aren't clojure
+
+[polymorphism-pattern]: http://refactoring.com/catalog/replaceConditionalWithPolymorphism.html
+
+A common question after the talk was "I'm in $LANGUAGE, how do I do variants there?"  Unfortunately, sometimes the sad truth is there's really no good way (rubyyyyyyyyy).  There are, however, two other techniques for dealing with this kind of situation in OO and dynamic OO languages.  [Martin Fowler described a pattern][polymorphism-pattern] in OO languages to eliminate type tags.  In this case the original antipattern is similar to the non-solution with a map from my talk - remember objects are glorified structs with inheritance.  While this approach has some known issues - serializability loss, no ability to do ad-hoc destructuring, and literally the expression problem, it gets the job done for a lot of people.
+
+However in more dynamic languages that have lightweight lambdas, we can do a bit better.  I mentioned to a few people that I maintain a compiler written in coffeescript at work (`.(o_o.)`), and this is the approach I use there:
+
+``` coffeescript
+class MyVariant extends Variant
+  # this call generates subclasses and static methods on MyVariant
+  @variants
+    tag1: ['val1', 'val2']
+    tag2: ['val3']
+
+# multiple constructors
+MyVariant.tag1(val1, val2)
+MyVariant.tag2(val3)
+
+# single destructor
+variant.cases
+  tag1: (val1, val2) -> ...
+  tag2: (val3) -> ...
+```
+
+The `cases` method simply calls into the correct function depending on the tag.  And even better, I can define methods for my variants on the base class.  It's worked well enough for me and is in production - if people are interested I'd be happy to extract this out into an npm or bower package.
+
 Thanks for reading and watching and pushing this further!  I think there's a lot of work to be done, but I hope variants help you rethink some painful code and avoid bugs in the future!
 
 ## ``<3 -(n_n`)``
