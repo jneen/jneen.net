@@ -128,7 +128,7 @@ class BlogPost < Content
   end
 
   def self.published
-    ls.select { |p| p.published_at < Time.now }
+    ls.select(&:published?)
   end
 
   def self.latest(count, offset=0)
@@ -141,7 +141,12 @@ class BlogPost < Content
   end
 
   def published_at
-    Time.parse(self[:date])
+    return @published_at if instance_variable_defined?(:@published_at)
+    @published_at = self[:date] && Time.parse(self[:date])
+  end
+
+  def published?
+    published_at && published_at < Time.now
   end
 
   def title
