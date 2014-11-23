@@ -30,6 +30,9 @@ I got two questions I wish I could have expanded on way more.  At 33:25 I was as
 ; ignore the tag, since it's already been matched as the dispatch value
 (defmethod perform-command :print [[_ val]] (println val))
 (defmethod perform-command :read [[_ fname]] (slurp fname))
+
+(perform-command [:print "hello world"]) ; prints "hello world"
+(perform-command [:read "./project.clj"]) ; returns the contents of project.clj
 ```
 
 It's got a few warts, but nothing that can't be papered over with a few really simple macros:
