@@ -129,7 +129,7 @@ It's possible we need better terminology around this (which would influence the 
 
 Thanks for reading and watching and pushing this further!  I think there's a lot of work to be done, but I hope variants help you rethink some painful code and avoid bugs in the future!
 
-``<3 -(n_n`)`` 
+## ``<3 -(n_n`)``
 
 jneen
 
