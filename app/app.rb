@@ -32,6 +32,11 @@ class BlagApp < Sinatra::Application
     def permalink(path='')
       File.join(Site[:url], path)
     end
+
+    def with_absolute_urls(data)
+      # XXX HACK XXX
+      data.gsub(/(?<=href=")[^"]+(?=")/, &method(:permalink))
+    end
   end
 
   configure do

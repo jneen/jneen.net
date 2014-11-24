@@ -15,10 +15,10 @@
       %item
         - url = permalink(post.path)
         %title= post.title
+        %description= post.description
         %link= url
         %guid= url
         %comments= "#{url}#comments"
         %pubDate= post.published_at.rfc822
-        %content:encoded
-          :cdata
-            #{post.html}
+        = preserve do
+          %content:encoded~ "<![CDATA[#{with_absolute_urls(post.html)}]]>"

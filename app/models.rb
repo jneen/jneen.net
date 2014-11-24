@@ -152,6 +152,10 @@ class BlogPost < Content
   def title
     self[:title]
   end
+
+  def description
+    self[:description] || title
+  end
 end
 
 class Page < Content
