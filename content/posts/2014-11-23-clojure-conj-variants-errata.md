@@ -45,7 +45,7 @@ It's got a few warts, but nothing that can't be papered over with a few really s
   `(defmulti ~name first ~@args))
 
 (defmacro defcase [name [tag & binders] body]
-  `(defmethod ~name ~tag [[_# ~@binders]] body))
+  `(defmethod ~name ~tag [[_# ~@binders]] ~@body))
 
 (defvariant perform-command)
 (defcase perform-command [:print val] (println val))
