@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.1.2'
+ruby '2.1.5'
 
 # markdown with syntax highlighting
 gem 'redcarpet'
