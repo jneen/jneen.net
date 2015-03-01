@@ -45,3 +45,56 @@ class IxlLexer < Rouge::RegexLexer
     mixin :string
   end
 end
+
+class UnfLexer < Rouge::RegexLexer
+  tag 'unf'
+  filenames '*.unf'
+
+  id = /\w[\w-]*/
+
+  state :root do
+    rule /\s+/, Text
+    rule /#.*?\n/, Comment
+    rule /%#{id}/, Keyword::Type
+    rule /@#{id}/, Keyword
+    rule /[.][.]?#{id}/, Name::Label
+    rule /-#{id}[?]?/, Str::Symbol
+    rule /\d+/, Num
+    rule %r(/#{id}?), Name::Decorator
+    rule %r((#{id}/)(#{id})) do
+      groups Name::Namespace, Name
+    end
+
+    rule /"{/, Str, :string_interp
+    rule /'?{/, Str, :string
+    rule /['"][^\s)\]]+/, Str
+
+    rule /[$]/, Name::Variable
+
+    rule /[-+:;~!()\[\]=?>|_%]/, Punctuation
+    rule /[.][.][.]/, Punctuation
+    rule id, Name
+  end
+
+  state :string do
+    rule /{/ do
+      token Str; push
+    end
+
+    rule /}/, Str, :pop!
+    rule /[$]/, Str
+    rule /[^${}]*/, Str
+  end
+
+  state :interp do
+    rule(/[(]/) { token Punctuation; push }
+    rule /[)]/, Punctuation, :pop!
+    mixin :root
+  end
+
+  state :string_interp do
+    rule /[$]#{id}?/, Name::Variable
+    rule /[$][(]/, Str::Interpol
+    mixin :string
+  end
+end
