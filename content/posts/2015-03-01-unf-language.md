@@ -7,6 +7,10 @@ date: "23 Nov 2014"
 
 This language is gonna rock, I'm really excited about it.  I've talked to a number of people about unf, but this is the first I've sat down and written out what it's going to look like.  In particular, I owe [Adam Baker][adam-baker] a huge thanks for talking through the first version of this with me in January.
 
+So here's unf!
+
+<!--fold-->
+
 ## Design goals
 
 Unf is designed to sit in the intersection of repl tools (bash, zsh, ex, etc) and scripting languages.  It's intended to scale both *down* to small things typed at a repl, and *up* to large-ish programs, to the extent you'd want to build with ruby, python, clojure, etc.
