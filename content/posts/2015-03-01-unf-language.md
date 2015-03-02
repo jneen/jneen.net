@@ -4,10 +4,11 @@ date: "23 Nov 2014"
 ---
 
 [adam-baker]: https://github.com/adambaker
+[unf]: https://gitlab.com/jneen/unf
 
 This language is gonna rock, I'm really excited about it.  I've talked to a number of people about unf, but this is the first I've sat down and written out what it's going to look like.  In particular, I owe [Adam Baker][adam-baker] a huge thanks for talking through the first version of this with me in January.
 
-So here's unf!
+So here's [unf][]!
 
 <!--fold-->
 
@@ -136,7 +137,7 @@ Future plans may also include support for `$1`, `$2`, etc.
 
 ## Literals, macros, parsing macros
 
-I strongly dislike macros that can hide in code.  I get really frustrated when I open a source file and see `(foo ...)` and can't tell whether it's a function or a macro until I read documentation.  For these reasons, literals and macros in unf, are all sigiled with `/`.  Here is a basic macro: the list constructor:
+I strongly dislike macros that can hide in code.  I get really frustrated when I open a source file and see `(foo ...)` and can't tell whether it's a function or a macro until I read documentation.  For these reasons, extensible literals and macros in unf are all sigiled with `/`.  Here is a basic macro: the list constructor:
 
 ``` unf
 /list[1 2 3]
