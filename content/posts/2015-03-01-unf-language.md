@@ -16,7 +16,7 @@ So here's [unf][]!
 
 Unf is designed to sit in the intersection of repl tools (bash, zsh, ex, etc) and scripting languages.  It's intended to scale both *down* to small things typed at a repl, and *up* to large-ish programs, to the extent you'd want to build with ruby, python, clojure, etc.
 
-It's an interpeted, pure, dynamic functional language, but for the most part it enables the user to behave as if they were in a language with a Hindley-Milner type-checker.  Open variants (called "tagwords"), paired with patterns and open methods, are the central strategy to manage polymorphism.
+It's an interpreted, pure, dynamic functional language, but for the most part it enables the user to behave as if they were in a language with a Hindley-Milner type-checker.  Open variants (called "tagwords"), paired with patterns and open methods, are the central strategy to manage polymorphism.
 
 Importantly, unf aims to be obvious and easy to explain.  You should not need to study PLT to understand the core concepts of unf.  To that end, we try to avoid jargon and unclear language.
 
