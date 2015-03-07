@@ -46,9 +46,9 @@ class IxlLexer < Rouge::RegexLexer
   end
 end
 
-class UnfLexer < Rouge::RegexLexer
-  tag 'unf'
-  filenames '*.unf'
+class TulipLexer < Rouge::RegexLexer
+  tag 'tulip'
+  filenames '*.tlp'
 
   id = /\w[\w-]*/
 
