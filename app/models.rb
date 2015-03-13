@@ -184,6 +184,13 @@ class Site < Content
   end
 end
 
+class Redirects < Content
+  def self.[](key)
+    base = find('redirects')
+    base && base[key]
+  end
+end
+
 module Renderer
   extend self
 

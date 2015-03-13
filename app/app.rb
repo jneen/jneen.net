@@ -47,6 +47,12 @@ class BlagApp < Sinatra::Application
     enable :logging
   end
 
+  get(/(.*)/) do |path|
+    redir = Redirects[path]
+    pass unless redir
+    redirect redir, 301
+  end
+
   get '/' do
     @posts = BlogPost.latest(5)
     haml :index
