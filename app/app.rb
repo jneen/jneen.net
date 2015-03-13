@@ -53,7 +53,7 @@ class BlagApp < Sinatra::Application
   end
 
   get '/posts/:name' do |name|
-    @post = BlogPost.find(name)
+    @post = BlogPost.find(name) or halt 404
     haml :post
   end
 
