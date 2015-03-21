@@ -4,7 +4,7 @@ date: "23 Nov 2014"
 ---
 
 [adam-baker]: https://github.com/adambaker
-[tulip]: https://gitlab.com/jneen/unf
+[tulip]: https://github.com/jneen/tulip
 
 EDIT: I've renamed the language from Unf to Tulip, because some folks pointed out that the old name created an unnecessarily sexualized environment, and I think tulips are pretty.
 
