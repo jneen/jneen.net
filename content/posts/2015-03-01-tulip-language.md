@@ -8,6 +8,8 @@ date: "23 Nov 2014"
 
 EDIT: I've renamed the language from Unf to Tulip, because some folks pointed out that the old name created an unnecessarily sexualized environment, and I think tulips are pretty.
 
+EDIT the second: I am no longer interested in feedback about the name.  It's tulip.  I like it that way.
+
 This language is gonna rock, I'm really excited about it.  I've talked to a number of people about tulip, but this is the first I've sat down and written out what it's going to look like.  In particular, I owe [Adam Baker][adam-baker] a huge thanks for talking through the first version of this with me in January.
 
 So here's [tulip][]!
