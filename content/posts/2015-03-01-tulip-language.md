@@ -6,9 +6,11 @@ date: "23 Nov 2014"
 [adam-baker]: https://github.com/adambaker
 [tulip]: https://github.com/jneen/tulip
 
-EDIT: I've renamed the language from Unf to Tulip, because some folks pointed out that the old name created an unnecessarily sexualized environment, and I think tulips are pretty.
-
-EDIT the second: I am no longer interested in feedback about the name.  It's tulip.  I like it that way.
+```
+ )`(
+(   ) .tulip
+  |/
+```
 
 This language is gonna rock, I'm really excited about it.  I've talked to a number of people about tulip, but this is the first I've sat down and written out what it's going to look like.  In particular, I owe [Adam Baker][adam-baker] a huge thanks for talking through the first version of this with me in January.
 
@@ -323,3 +325,8 @@ A *script* is a different kind of tulip file.  A script has a `@script` declarat
 ## Putting it all together
 
 Tulip is not a small language.  My goal was to include enough features to be useful, add extensibility in the right places, but also guarantee a consistent look with predictable behaviors.  Tulip is still in active development, and I could use a whole lot of help, both filling in the design gaps here and actually churning out the implementation.  Please ping me on twitter (`@jneen_`) with any feedback or if you want to get involved!
+
+*EDIT*: I've renamed the language from Unf to Tulip, because some folks pointed out that the old name created an unnecessarily sexualized environment, and I think tulips are pretty.
+
+*EDIT the second*: I am no longer interested in feedback about the name.  It's tulip.  I like it that way.
+
