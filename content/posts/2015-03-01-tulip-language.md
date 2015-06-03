@@ -1,6 +1,6 @@
 ---
 title: Tulip, an Untyped Functional Language Which is Going to Be Pretty Cool
-date: "23 Nov 2014"
+date: "01 Mar 2015"
 ---
 
 [adam-baker]: https://github.com/adambaker
