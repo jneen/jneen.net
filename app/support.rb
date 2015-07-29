@@ -93,8 +93,8 @@ class TulipLexer < Rouge::RegexLexer
   end
 
   state :string_interp do
+    rule /[$][(]/, Str::Interpol, :interp
     rule /[$]#{id}?/, Name::Variable
-    rule /[$][(]/, Str::Interpol
     mixin :string
   end
 end
