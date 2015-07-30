@@ -109,15 +109,15 @@ where the variable `foo` is bound inside the block.  Nested blocks have the usua
 Things get a little more interesting with destructuring.  Rather than being a simple variable binder (`foo` above), the binder can also match and destructure tagged values over multiple clauses:
 
 ``` tulip
-+ map f = [ .nil => .nil; .cons x xs => .cons (f x) (map f xs) ]
+map f = [ .nil => .nil; .cons x xs => .cons (f x) (map f xs) ]
 ```
 
 The `:` symbol matches and binds multiple patterns over the same value.  Patterns can also include named pattern or type checks (sigiled with `%`).
 
 ``` tulip
-+ add = [ (x : %uint) (y : %uint) => add-uint x y ]
-+ map (f:%callable) = ...
-+ foo (bar : .bar _ _) = ...
+add = [ (x : %uint) (y : %uint) => add-uint x y ]
+map (f:%callable) = ...
+foo (bar : .bar _ _) = ...
 ```
 
 All the native types will have `%`-sigiled type names, and there will be a way to implement your own named checks, which is still in design.
@@ -221,7 +221,7 @@ Flags are identifiers that begin with `-`.  A flag-pair is a flag followed immed
 Flags are used for keyword arguments.  Given a function defined as:
 
 ``` tulip
-+ foo -bar=x -baz=y = ...
+foo -bar=x -baz=y = ...
 ```
 
 it can be called as:
