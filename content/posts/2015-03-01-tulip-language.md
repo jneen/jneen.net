@@ -12,6 +12,8 @@ date: "01 Mar 2015"
   |/
 ```
 
+**UPDATE**: I've made some changes to the design! [There's an updated version of this post here.](/posts/2015-07-29-tulip-language-updated)
+
 This language is gonna rock, I'm really excited about it.  I've talked to a number of people about tulip, but this is the first I've sat down and written out what it's going to look like.  In particular, I owe [Adam Baker][adam-baker] a huge thanks for talking through the first version of this with me in January.
 
 So here's [tulip][]!
