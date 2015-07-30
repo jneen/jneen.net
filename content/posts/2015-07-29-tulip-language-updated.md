@@ -6,6 +6,7 @@ date: "29 Jul 2015"
 [adam-baker]: https://github.com/adambaker
 [morgan-astra]: https://twitter.com/morganastra
 [tulip]: https://github.com/jneen/tulip
+[variants-talk]: https://www.youtube.com/watch?v=ZQkIWWTygio "Variants Are Not Unions"
 
 ```
  )`(
@@ -94,7 +95,7 @@ In simple terms, they construct values.  Some examples of tagwords that will be 
 .none
 ```
 
-For a more detailed explanation of this pattern, see my talk at clojure conj 2014: 
+For a more detailed explanation of this pattern, see [my talk at clojure conj 2014][variants-talk]
 
 ## Lambdas and patterns
 
