@@ -312,7 +312,7 @@ For the root module of a file, the square brackets can be omitted.  A module is 
 @import yet-another-module
 ```
 
-An **object** in tulip is a module with parameters:
+A module with parameters is called an **object**:
 
 ``` tulip
 @object Point x y [
