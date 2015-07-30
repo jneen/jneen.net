@@ -257,8 +257,6 @@ This is read as: `map` is a method that takes two arguments, and dispatches on t
 
 In implementation definitions, only the dispatched argument can be pattern-matched, and only simple tag destructures, native type checks, and default (`_`) are allowed.  Open recursion, hower is both allowed and encouraged.  Multiple dispatch is also planned, but not yet designed.
 
-Methods contain a global registry of implementations, so implementations can only be specified at the top-level of a module.  This restriction might be lifted in the future, but that could cause other complications.
-
 ## Side Effects, Zero Arguments, Multiple Expressions
 
 Tulip is an *impure* language - functions are allowed to have *side effects* - i.e. change the state of the world in some way other than the arguments passed to it.
@@ -288,21 +286,19 @@ Tulip's data structures are *immutable*.  Under the hood, there are only 4 side-
 
 The `spawn` function takes a zero-argument function and spawns an erlang-style actor with a message queue and a backup queue, and returns a handle to the process.  The `receive` function takes a single-argument function and blocks until the queue contains a matching message.  An optional `-timeout=(seconds, action)` flag can be passed, which will run the zero-argument function `action` if `timeout` seconds pass without a matching message.  The `send` function takes a process handle and a message, and sends the message to the process.
 
-## Modules, Scripts, Importing, Private Definitions
+## Modules, Objects, Importing
 
 A module is a collection of definitions, usually living in a file.  A file can either be a script or export multiple modules.
 
 A module is declared as follows:
 
 ``` tulip
-@module my-module-name arg-1 arg-2 [
+@module my-module-name [
   foo = 1
   bar = 2
 ]
 
-my-instance = my-module-name 'x 'y
 my-instance/foo # => 1
-my-instance/arg-1 # => 'x
 ```
 
 Any name ending with `-` is considered private and will not be re-exported.  Tagwords whose names start with `-` (as in `.-foo`) are also private to the module - pattern matches in other modules against those tagwords will not match.
@@ -311,9 +307,25 @@ For the root module of a file, the square brackets can be omitted.  A module is 
 
 ``` tulip
 @module my-module arg-1
-@import another-module arg-1
-@import yet-another-module [ name other-name ]
+
+@import another-module
+@import yet-another-module
 ```
+
+An **object** in tulip is a module with parameters:
+
+``` tulip
+@object Point x y [
+  magnitude = /[x y] > map square > sum > sqrt
+  move dx dy = Point (add x dx) (add y dy)
+]
+
+center = Point 0 0 # => *<Point 0 0>
+center/x # => 0
+center/move 2 3 # => *<Point 2 3>
+```
+
+The arguments act as if every member was a function with those arguments curried in.
 
 ## Coming Soon
 
