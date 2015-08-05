@@ -99,7 +99,7 @@ For a more detailed explanation of this pattern, see [my talk at clojure conj 20
 
 ## Lambdas and patterns
 
-It's expected that lambdas, will be a common thing to type on the repl, so it's been kept very lightweight.  A basic block looks like this:
+It's expected that lambdas will be a common thing to type on the repl, so the syntax has been kept very lightweight.  A basic lambda looks like this:
 
 ``` tulip
 [ foo => some-expr-in foo ]
