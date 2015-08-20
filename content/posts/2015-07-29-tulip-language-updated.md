@@ -176,25 +176,26 @@ For interpolation, use `"{...}` with `$(...)`:
 
 Tulip is not a lazy language (mostly).  If you want a lazy expression, simply prefix it with `~`.  Evaluation of lazy expressions is deferred until a pattern-match needs the value.  A non-pattern-matching function called with a lazy value results in a further lazy value.
 
-A **let-expression** looks like `name = value; expr`.  It must be parenthesized to avoid ambiguity.  You can bind multiple names this way in an expression:
+To bind variables in an ad-hoc way, open a **block scope** with `{}`:
 
 ``` tulip
-foo = (
+foo = {
   bar = 1
-  baz = 2
-  zot bar baz
-)
 
-foo bar = baz
+  # defines a local function
+  baz zot = 2
+
+  quux
+}
 ```
 
-Let-bound function arguments can pattern match in the same way as lambda arguments.  Multiple definitions of the same function in a sequence of let bindings behaves the same as multiple clauses in a lambda.
+Variables defined in this way are called **let-bound**, as opposed to **argument-bound**.  Let-bound function arguments can pattern match in the same way as lambda arguments.  Multiple definitions of the same function in a sequence of bindings behaves the same as multiple clauses in a lambda.
 
 Tulip supports **let-recursion**: a variable bound in a let-expression (`name = value`) can use itself in its definition.  A sequence of let-expressions can also refer to each other recursively.  This generally works fine when the values defined are all functions, but it can break down when the values use recursive references strictly:
 
 ``` tulip
 # the lazy y-combinator (.o_o).
-fix f = (x = f x; x)
+fix f = { x = f x; x }
 ```
 
 In this case, tulip will detect the recursion, and the `f x` will be automatically wrapped with a lazy operator (`~`). Any reference loop in a sequence of lets will be closed by converting the last link to a lazy reference.  This makes it simple to create graph-like structures.
@@ -212,26 +213,24 @@ foo x = x > bar > baz
 
 ## Flags, Optional Arguments, Maps
 
-Flags are identifiers that begin with `-`.  A flag-pair is a flag followed immediately (no space) by an `=` and an expression.  When a flag-pair is called with another flag-pair argument, it merges that pair into its internal record.  For example,
+Flags are identifiers that begin with `-`.  A flag-pair is a flag followed immediately (no space) by an `:` and an expression.  When a flag-pair is called with another flag-pair argument, it merges that pair into its internal record.  For example,
 
 ``` tulip
--foo=1 # => (-foo 1)
--foo=1 -bar=2 # => (-foo=1 -bar=2)
+-foo: 1 # => (-foo:1)
+-foo: 1 -bar: 2 # => (-foo:1 -bar:2)
 ```
 
 Flags are used for keyword arguments.  Given a function defined as:
 
 ``` tulip
-foo -bar=x -baz=y = ...
+foo -bar: x -baz: y = ...
 ```
 
 it can be called as:
 
 ``` tulip
-foo -baz=3 -bar=2
+foo -baz: 3 -bar: 2
 ```
-
-Since function calls are not resolved until all arguments are given, the expression `foo -baz=3` will return a lambda that expects a `-bar=...` keyword argument.
 
 Splats for keyword arguments are still in design phase, as are optional arguments and boolean flags. The latter will automatically be converted to `.some`/`.none` or `.t`/`.f`.
 
@@ -262,10 +261,10 @@ In implementation definitions, only the dispatched argument can be pattern-match
 
 Tulip is an *impure* language - functions are allowed to have *side effects* - i.e. change the state of the world in some way other than the arguments passed to it.
 
-If you want to execute a function just for its side effects and return a different value, you may use parentheses:
+If you want to execute a function just for its side effects and return a different value, you may use a block:
 
 ``` tulip
-(do-thing arg1; actual-value)
+{ do-thing arg1; actual-value }
 ```
 
 You can chain together as many calls here as you like.  If you want to define a function that takes no arguments, you can use the special parameter `!`:
