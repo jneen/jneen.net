@@ -66,7 +66,8 @@ class TulipLexer < Rouge::RegexLexer
     end
 
     rule /"{/, Str, :string_interp
-    rule /'?{/, Str, :string
+    rule /'{/, Str, :string
+    rule /[{}]/, Punctuation
     rule /['"][^\s)\]]+/, Str
 
     rule /[$]/, Name::Variable

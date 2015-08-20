@@ -149,7 +149,7 @@ list > map [ some-fn $ arg ]
 
 Future plans may also include support for `$1`, `$2`, etc.
 
-## Literals, macros, parsing macros
+## Literals and Macros
 
 I strongly dislike macros that can hide in code.  I get really frustrated when I open a source file and see `(foo ...)` and can't tell whether it's a function or a macro until I read documentation.  For these reasons, extensible literals and macros in tulip are all sigiled with `/`.  Here is a basic macro: the list constructor:
 
@@ -159,10 +159,10 @@ I strongly dislike macros that can hide in code.  I get really frustrated when I
 
 The implementation syntax for these is still in design phase, but they will take after rust in that they will pattern-match against syntax, and result in new syntax.  I expect `list` to be so common that for that special case it is permitted to leave off the macro name: `/[1 2 3]` is equivalent.
 
-Strings are delimited with `{...}`, which balances curly braces and respects `\{` and `\}`.  But since many string literals are much simpler, you can also use `'` as a one-sided delimiter that scans to whitespace or one of the delimiters `]`, `)`, or `>`.  Here are some examples:
+Strings are delimited with `'{...}`, which balances curly braces and respects `\{` and `\}`.  But since many string literals are much simpler, you can also use `'` as a one-sided delimiter that scans to whitespace or one of the delimiters `]`, `)`, or `>`.  Here are some examples:
 
 ``` tulip
-{foo} # => the string {foo}
+'{foo} # => the string {foo}
 'foo # => the string {foo}
 ```
 
