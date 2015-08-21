@@ -154,10 +154,10 @@ Future plans may also include support for `$1`, `$2`, etc.
 I strongly dislike macros that can hide in code.  I get really frustrated when I open a source file and see `(foo ...)` and can't tell whether it's a function or a macro until I read documentation.  For these reasons, extensible literals and macros in tulip are all sigiled with `/`.  Here is a basic macro: the list constructor:
 
 ``` tulip
-/list[1 2 3]
+/list[1; 2; 3]
 ```
 
-The implementation syntax for these is still in design phase, but they will take after rust in that they will pattern-match against syntax, and result in new syntax.  I expect `list` to be so common that for that special case it is permitted to leave off the macro name: `/[1 2 3]` is equivalent.
+The implementation syntax for these is still in design phase, but they will take after rust in that they will pattern-match against syntax, and result in new syntax.  I expect `list` to be so common that for that special case it is permitted to leave off the macro name: `/[1; 2; 3]` is equivalent.
 
 Strings are delimited with `'{...}`, which balances curly braces and respects `\{` and `\}`.  But since many string literals are much simpler, you can also use `'` as a one-sided delimiter that scans to whitespace or one of the delimiters `]`, `)`, or `>`.  Here are some examples:
 
@@ -250,7 +250,7 @@ This is read as: `map` is a method that takes two arguments, and dispatches on t
 @impl map f (.cons x xs) = .cons (f x) (map f xs)
 @impl map f .nil = .nil
 @impl map f (.some x) = .some (f x)
-@impl map .none = .none
+@impl map _ .none = .none
 @impl map f (.ok x) = .ok (f x)
 @impl map f (.err e) = .err e
 ```
@@ -271,7 +271,11 @@ You can chain together as many calls here as you like.  If you want to define a 
 
 ``` tulip
 # a zero-argument definition
-do-all-things! = ...
+do-all-things! = {
+  do-thing-1 arg-1
+  do-thing-2 arg-2
+  .ok
+}
 
 # a zero-argument call
 do-all-things!
@@ -342,7 +346,7 @@ Features coming soon include:
 
 Tulip is not a small language.  My goal was to include enough features to be useful, add extensibility in the right places, but also guarantee a consistent look with predictable behaviors.  Tulip is still in active development, and I could use a whole lot of help, both filling in the design gaps here and actually churning out the implementation.  Please ping me on twitter (`@jneen_`) with any feedback or if you want to get involved!
 
-Still interested?  Follow `@tuliplang` on Twitter for more updates, and come join us in `#tuliplang` on Freenode.
+Still interested?  Follow `@tuliplang` on Twitter for more updates, and come join us in `#tulip` on the [snek slack](http://snek.translunar.space/).
 
 If you're queer/trans, a person of color, and/or a woman, we'd love for you to join the very small team working on this.  We currently need help with:
 
