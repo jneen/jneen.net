@@ -305,12 +305,12 @@ A module is declared as follows:
 my-instance/foo # => 1
 ```
 
-Any name ending with `-` is considered private and will not be re-exported.  Tagwords whose names start with `-` (as in `.-foo`) are also private to the module - pattern matches in other modules against those tagwords will not match.
+Any name ending with `-` is considered private and will not be re-exported.  Tagwords whose names start with two dots (as in `..foo`) are namespaced to the module - pattern matches in other modules against those tagwords will need to use `.my-module-name/foo` to pattern-match.
 
 For the root module of a file, the square brackets can be omitted.  A module is imported into another module with the `@import` directive:
 
 ``` tulip
-@module my-module arg-1
+@module my-module
 
 @import another-module
 @import yet-another-module
@@ -320,7 +320,7 @@ A module with parameters is called an **object**:
 
 ``` tulip
 @object Point x y [
-  magnitude = /[x y] > map square > sum > sqrt
+  magnitude = /[x; y] > map square > sum > sqrt
   move dx dy = Point (add x dx) (add y dy)
 ]
 
