@@ -66,7 +66,7 @@ is equivalent to `bar foo baz`.  Alternately, you can bind a variable to a name 
 foo > x => bar > baz > add x
 ```
 
-## Tagwords
+## Tagwords, Tuples
 
 Tagwords are the basic building block of all tulip's user-space data structures.  Syntactically, a tagword is simply an identifier sigiled with a `.`, as in `.foo`.  When a tagword is called as a function, it creates a **tagged value**.  When a tagged value is called as a function, it appends the data to its internal list.  Let's look at an example:
 
@@ -96,6 +96,15 @@ In simple terms, they construct values.  Some examples of tagwords that will be 
 ```
 
 For a more detailed explanation of this pattern, see [my talk at clojure conj 2014][variants-talk]
+
+A **tuple** is multiple expressions joined with `,`, as in `foo bar > baz, zot`.  The comma has lower precedence than `>`, so often tuples are surrounded by parentheses: `foo (bar, baz > zot)`.  Tuples are represented with the `.tuple` tag, and are right-nesting, so that:
+
+```
+(.x, .y, .z) # => .tuple x (.tuple .y .z)
+((.x, .y), .z) # => .tuple (.tuple .x .y) .z
+```
+
+This allows for open methods (see below) to be defined for arbitrary lengths of tuples.
 
 ## Lambdas and patterns
 
@@ -284,11 +293,24 @@ do-all-things!
 [ ! => ... ]
 ```
 
+Often, for lambdas whose primary purpose is side effects, you will want to simply evaluate multiple expressions without an extra layer of nesting.  For this, tulip supports **block-lambda sugar**:
+
+``` tulip
+# a block-lambda
+{ x => foo x; bar x }
+
+# equivalent to...
+[ x => { foo x; bar x }]
+
+# a zero-argument block-lambda
+{ ! => do-a-thing! ; do-another-thing! }
+```
+
 ## Concurrency
 
 Tulip's data structures are *immutable*.  Under the hood, there are only 4 side-effecting operations: `spawn`, `send`, `receive`, and ffi calls.
 
-The `spawn` function takes a zero-argument function and spawns an erlang-style actor with a message queue and a backup queue, and returns a handle to the process.  The `receive` function takes a single-argument function and blocks until the queue contains a matching message.  An optional `-timeout=(seconds, action)` flag can be passed, which will run the zero-argument function `action` if `timeout` seconds pass without a matching message.  The `send` function takes a process handle and a message, and sends the message to the process.
+The `spawn` function takes a zero-argument function and spawns an erlang-style actor with a message queue and a backup queue, and returns a handle to the process.  The `receive` function takes a single-argument function and blocks until the queue contains a matching message.  An optional `-timeout: (seconds, action)` flag can be passed, which will run the zero-argument function `action` if `timeout` seconds pass without a matching message.  The `send` function takes a process handle and a message, and sends the message to the process.
 
 ## Modules, Objects, Importing
 
@@ -302,7 +324,7 @@ A module is declared as follows:
   bar = 2
 ]
 
-my-instance/foo # => 1
+my-module-name/foo # => 1
 ```
 
 Any name ending with `-` is considered private and will not be re-exported.  Tagwords whose names start with two dots (as in `..foo`) are namespaced to the module - pattern matches in other modules against those tagwords will need to use `.my-module-name/foo` to pattern-match.
@@ -329,7 +351,7 @@ center/x # => 0
 center/move 2 3 # => *<Point 2 3>
 ```
 
-The arguments act as if every member was a function with those arguments curried in.
+The arguments act as if every member was a function with those arguments curried in.  Here, `Point` is an **object constructor** and `center` is an **object instance**.
 
 ## Coming Soon
 
