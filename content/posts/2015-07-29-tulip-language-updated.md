@@ -14,7 +14,7 @@ date: "29 Jul 2015"
   |/
 ```
 
-This language is gonna rock, I'm really excited about it.  This post is an edit of the [previous tulip post](/posts/2015-03-01-tulip-language), updated with the latest version of the semantics.
+This language is gonna rock, I'm really excited about it.  This post is an update to the [previous Tulip post](/posts/2015-03-01-tulip-language). **Update:** The latest version of this intro to Tulip can be found in [`docs/intro.md` in the source repo](https://github.com/tulip-lang/tulip/blob/master/doc/intro.md#readme).
 
 I owe [Adam Baker][adam-baker] a huge thanks for talking through the first version of this with me in January, and [Morgan Astra][morgan-astra] for polishing off the design with me in May.
 
