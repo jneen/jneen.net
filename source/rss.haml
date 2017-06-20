@@ -23,5 +23,4 @@
         %guid= url
         %comments= "#{url}#comments"
         %pubDate= post.published_at.rfc822
-        -#%content:encoded~ "<![CDATA[#{with_absolute_urls(post.html)}]]>"
-        %content:encoded~ "<![CDATA[#{post.html}]]>"
+        %content:encoded~ "<![CDATA[#{with_absolute_urls(post.html)}]]>"
