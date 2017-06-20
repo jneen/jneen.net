@@ -1,8 +1,11 @@
 # sass
 .sass-cache
 
-# public folder
-/public
+# build folder
+/build
 
 # logs
 /log/
+
+# bundler binstubs
+/bin

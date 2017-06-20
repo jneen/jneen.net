@@ -1,0 +1,11 @@
+- posts.each do |post|
+  %article
+    = partial 'post/header', locals: { post: post }
+
+    - post.fold_split do |content, fold|
+      ~ content
+      - if fold.present?
+        .fold
+          ~ fold
+          %a{href: "#{post.path}#comments"} Comments
+        %a.read-more{href: post.path} more &raquo;

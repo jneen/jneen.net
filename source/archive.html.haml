@@ -1,0 +1,9 @@
+- title "Archive (page #{pageno})"
+- description Site[:description]
+
+= partial 'post/archive', locals: { posts: posts }
+
+- if has_next
+  %a.archive{href: "/archive/#{1+pageno}"} next page &raquo;
+- else
+  .archive (no more posts)
