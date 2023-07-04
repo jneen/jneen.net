@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/jneen
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jneen.net
+  * I am jneen (https://keybase.io/jneen) on keybase.
+  * I have a public key with fingerprint 93A8 3342 F6C1 9C88 3518  784F 692D EAAD 282B CEC2
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101cd9be7f4d60d914a2b09f1da56e7c9c9dc957876477eff49661851bfa027d1570a",
+      "fingerprint": "93a83342f6c19c883518784f692deaad282bcec2",
+      "host": "keybase.io",
+      "key_id": "692deaad282bcec2",
+      "kid": "0101cd9be7f4d60d914a2b09f1da56e7c9c9dc957876477eff49661851bfa027d1570a",
+      "uid": "6d701f300c30c7c543afe774a497a200",
+      "username": "jneen"
+    },
+    "service": {
+      "hostname": "jneen.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1668782040,
+  "expire_in": 157680000,
+  "prev": "eda255fef463030be422ddbcb74c73d9f1726fa6e9a011ee153eeacdec4a7cb3",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUn9QFGUYPsBCbpTEprorGHHD5hh+uL/39pSAJmkohIpgijFp99tvYeHYPfaO
+45cokjE6iilKgWJK1CST0uQAFZIpISAOmg1KTYGVIBOH4wFCoQO0aznTH/3Z9883
+3/M9z/M+7zvvvuV+hqU+UtT4SUvEpU6fi7/zBlD4vrcU4RWhGLGVIrnw/gXtAnS6
+MnMlAbEhKIZiQGB5yIikQKMCi5EczqOsiAkcRUMGsIAVAEsxVoYmGQaKIsnSNGal
+MF7kUJwRMIpBOSQSESU5C6oOVZJdmi1LcFaCIHGRBhgLrFaCwqyMlRRpFhcgxwm4
+FecBBLgmzFacukILx3NOGC0pGqY9Mu/H+w/+/5y74O86AoNiIoGigEABAyiS4ETI
+MCRHsgyHo6hOdEJV5vKgxs6RIZSRskhEg9wSgPpU9Tb+/R0tQ5emcqiKSwGKXYOz
+XS6H06bLXMUOnVcI+cx/HDJ5SRa0CWoKN1SdkiIjNkxjApekW2I0rY0PR0k0EoFF
+DkmFmZLOoBjaimpHrwPdmiUUOJyiRCiSNIG+SqA8JHFcEHjAMyRgCEGbD4PTIkdD
+lkMxDEKMIiDkgAAByTGAJxC9qXxZQWyUlpPL0jydUpbMuQpUiJQZd/kSSww+Sw0h
+j69ecuA48dzsufqdlKko5cHWPeSrr5zBGLDiAXJj7pF5k+VW/Vjsx95YT/lQdaD/
+9OdT/U2h4bM+lUHF2+YOJ12N2t5/8Fhq6alfgtMn49zJE8TgxkZznBJ5ei7Awto5
+Ziy754X8ltpd8Z6nBwb2idOHXLefMa2yFa8+YvwwMU9NaCJ/MEbvUPraT/Sm3DvY
+3OI19c4eKnjKPBzW3Tz0zfqjNOm4HjOfnr9zpT0gcHDRvN4v3oa81Ol5eb/v1Lr4
+qj/rtkaUNpW99onrt7bOz0a+eOtGzhn6xJcXg+9s27LqWi00earPg4iimpb9keZl
+s9+eHd6wmZrsO/5m+Nnt+ZdH7+69Gv+pMaP5pJO0tFPOsKBupuqjsIq870oajonI
+QAyoMcS8cSXRcevC+Ka27A7Lj/ntDSvLJtZ2P7rcO5qBne8z1PReD5cDFkZ33DTf
+g+3mhp/jFskOW0jSAvlwq+fZgKHR3CR4uwpMBFJ4vfxrVOPYXG1doj91J1nMOP1B
+Zbo/deDwY/NbLqyI7RKnNnVhR/8YvIsENe9W3wNPND7vDfo+oaZjPKkrrX+t+lXG
+xpatwT27b9KteyZN6X6hpwrt4V8feUUphy9Wb56rm1mXNvGT9E6ynMC93lOWZLWv
+wUb4y4vh5/icmZHoyuF302LHrwwae0Pce87Ymn1trerMsrbQYalkb0rwmgrDpdT+
+hRL7YMe1cu907JMV6GhdhcVteDv1Lw==
+=ATWG
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jneen
+
+==================================================================

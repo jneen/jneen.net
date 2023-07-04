@@ -1,6 +1,8 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+$DEBUG = false
+
 Haml::TempleEngine.disable_option_validator!
 
 load File.join(File.dirname(__FILE__), 'lib/blag.rb')
@@ -53,6 +55,9 @@ Page.ls.each do |page|
   genproxy page.path, "page.html", page: page
 end
 
+# homepage = Content.find('index')
+# genproxy '/', 'page.html', page: Content.find('index')
+
 next_archive_page = nil
 0.upto(1000) do |pageno|
   archive_page = next_archive_page || BlogPost.page(0)
@@ -66,8 +71,8 @@ next_archive_page = nil
     has_next: has_next
   }
 
-  genproxy "/archive/#{pageno}", "archive.html", archive_locals
-  genproxy "/archive/index.html", "archive.html", archive_locals if pageno == 0
+  genproxy "/blag/#{pageno}", "archive.html", archive_locals
+  genproxy "/blag/index.html", "archive.html", archive_locals if pageno == 0
 
   break unless has_next
 end

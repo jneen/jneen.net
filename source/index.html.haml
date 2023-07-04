@@ -1,6 +1,5 @@
-- posts = BlogPost.latest(5)
 - description Site[:description]
 
-= partial 'post/archive', locals: { posts: posts }
+= partial 'page', locals: { page: Content.find('index') }
 
-%a.archive(href="/archive") archive &raquo;
+%a.archive(href="/blag") the blag &raquo;
