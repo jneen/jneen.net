@@ -3,12 +3,13 @@ links:
   - name: Home
     href: /
 
-  - name: RSS
-    href: /rss
+  - name: CV / Resumé
+    href: /pages/cv
 
-  - name: Archive
-    href: /archive
+  - name: discord
+    href: https://discord.gg/ctdn8Zbx2f
+    target: _blank
 
-  - name: About Me
-    href: /pages/about
+  - name: Blag (old)
+    href: /blag
 ---

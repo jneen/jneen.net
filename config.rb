@@ -3,9 +3,9 @@
 
 $DEBUG = false
 
-Haml::TempleEngine.disable_option_validator!
+# Haml::TempleEngine.disable_option_validator!
 
-load File.join(File.dirname(__FILE__), 'lib/blag.rb')
+require File.join(File.dirname(__FILE__), 'lib/blag.rb')
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -71,8 +71,14 @@ next_archive_page = nil
     has_next: has_next
   }
 
+  genproxy "/blag", "archive.html", archive_locals if pageno == 0
   genproxy "/blag/#{pageno}", "archive.html", archive_locals
-  genproxy "/blag/index.html", "archive.html", archive_locals if pageno == 0
 
   break unless has_next
 end
+
+DISCORD_URL = 'https://discord.gg/kXZRrX2PTr'
+redirect 'jneezone/index.html', to: DISCORD_URL
+redirect 'discord/index.html', to: DISCORD_URL
+
+

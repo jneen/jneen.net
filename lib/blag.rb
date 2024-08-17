@@ -169,6 +169,7 @@ end
 class Links < Content
   def self.each(&b)
     find('links')['links'].each do |link|
+      link['target'] ||= nil
       yield OpenStruct.new(link)
     end
   end

@@ -3,9 +3,9 @@
     = partial 'post/header', locals: { post: post }
 
     - post.fold_split do |content, fold|
-      ~ content
+      != content.html_safe
       - if fold.present?
         .fold
-          ~ fold
+          != fold.html_safe
           %a{href: "#{post.path}#comments"} Comments
         %a.read-more{href: post.path} more &raquo;

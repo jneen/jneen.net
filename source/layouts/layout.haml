@@ -21,7 +21,10 @@
         %menu
           - Links.each do |link|
             %li
-              %a{href:link.href}= link.name
+              - if link.target
+                %a{href:link.href, target:link.target}= link.name
+              - else
+                %a{href:link.href}= link.name
 
       %footer
         All content &copy; #{Site[:author]}.

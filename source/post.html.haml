@@ -4,7 +4,7 @@
 %article
   = partial 'post/header', locals: { post: post }
 
-  ~ post.html
+  != post.html.html_safe
 
   - if Site[:disqus]
     #comments

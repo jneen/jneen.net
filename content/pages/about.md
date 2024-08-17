@@ -26,5 +26,4 @@ My research interests include programming language design, including syntax desi
 [programming-19]: https://2019.programming-conference.org/details/MoreVMs-2019/1/A-Shell-like-Model-for-General-Purpose-Programming "A Shell-like Model for General Purpose Programming at <Programming> 2019"
 
 ## Contact
-* email (humans only, please): `jneen AT jneen DOT net`.
-  No cold emails please, if you value your deliverability. I mark recruiter spam as spam.
+* email: `jneen AT jneen DOT net`.
