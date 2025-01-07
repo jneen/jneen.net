@@ -80,5 +80,9 @@ end
 DISCORD_URL = 'https://discord.gg/kXZRrX2PTr'
 redirect 'jneezone/index.html', to: DISCORD_URL
 redirect 'discord/index.html', to: DISCORD_URL
+redirect 'talks/strangeloop-2016/index.html', to: 'https://www.youtube.com/watch?v=lvclTCDeIsY'
+redirect 'talks/clojure-west-2015/index.html', to: 'https://www.youtube.com/watch?v=i1KVwoE3n28'
+redirect 'talks/clojure-conj-2014/index.html', to: 'https://www.youtube.com/watch?v=ZQkIWWTygio'
+redirect 'talks/skeleton-trees/index.html', to: 'https://www.youtube.com/watch?v=53Dp0-9Afi4'
 
 
