@@ -9,7 +9,7 @@ title: the jneen collective welcomes you to this here website
 
 ## yo
 
-hi! i'm the jneen collective, also known as jneen or Jeanine Adkisson. i'm a [composer][bandcamp], a [streamer][twitch], a [mario maker troll level designer][trolls] and i used to spend a lot of my time [programming][github]. these days i just sort of make a lot of weird art.
+hi! i'm the jneen collective, also known as jneen or Jeanine Adkisson. i'm a [composer][bandcamp], a [streamer][twitch], a [mario maker troll level designer][trolls] and [programmer][github]. i make a lot of weird art.
 
 ## my music
 
