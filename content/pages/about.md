@@ -4,9 +4,11 @@ title: About Me
 
 I'm a programmer, a musician, and a trans feminist.  I care about people.
 
-* [twitter](http://twitter.com/jneen_)
-* [github](https://github.com/jneen)
-* [resumé](https://gist.github.com/jneen/4b10c22b670d5e6676e6)
+* [bsky: @jneen.ca](https://bsky.app/profile/jneen.ca)
+* [fedi: @jneen@unstable.systems](https://unstable.systems/@jneen)
+* [github: @jneen](https://github.com/jneen)
+* [codeberg: @jneen](https://codeberg.org/jneen)
+* [resumé](/pages/cv)
 
 ## Music
 

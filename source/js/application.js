@@ -30,3 +30,4 @@ Blag.ReadMore = (function($) {
 
   $(document).ready(init);
 })(jQuery);
+

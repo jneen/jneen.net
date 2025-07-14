@@ -1,21 +1,28 @@
 ---
-title: the jneen collective welcomes you to this here website
+title: jneen welcomes you to this here website
 ---
 
 [bandcamp]: https://jneen-collective.bandcamp.com/ "my bandcamp"
 [twitch]: https://twitch.tv/jneen "hang out on twitch"
 [trolls]: https://makerteams.net/curatedtrolls/maker/jneen "jneen's levels on curated trolls"
-[github]: https://github.com/jneen
+[github]: https://github.com/jneen "jneen's github"
+[bsky]: https://bsky.app/jneen.ca
+[codeberg]: https://codeberg.org/jneen "jneen's codeberg (for current projects)"
+[gitlab]: https://gitlab.org/jneen "jneen's gitlab"
+[automaphonica]: https://automaphoni.ca "a really cool label"
+[qcc]: https://queercomputerclub.ca "a really cool hackerspace"
 
 ## yo
 
-hi! i'm the jneen collective, also known as jneen or Jeanine Adkisson. i'm a [composer][bandcamp], a [streamer][twitch], a [mario maker troll level designer][trolls] and [programmer][github]. i make a lot of weird art.
+hi! i'm the jneen collective, also known as jneen or Jeanine Adkisson. i'm a [composer][bandcamp], a [streamer][twitch], a [mario maker troll level designer][trolls] and [programmer][codeberg] ([previously][gitlab], [previously][github]). i make a lot of weird, cool art.
+
+i co-run a nonprofit indie label called [automaphonica][], and a queer hackerspace in toronto called [queer computer club][qcc].
 
 ## my music
 
 [renoise]: https://www.renoise.com/ "renoise"
 
-i make music with [renoise][] but am also familiar with ableton. here are some things i like to make:
+i make music with [renoise][] am also an avid user of ableton and bitwig. here are some things i like to make:
 
 * new synthesized sounds / chopping and rearranging short samples
 * harmonies and arrangements for existing melodic material
@@ -26,7 +33,7 @@ i make music with [renoise][] but am also familiar with ableton. here are some t
 * manual chiptune-style tracker effects to really bring out the expressiveness of an instrument
 * little pixel sketches to go with the tracks i release
 
-here are a couple of tracks you should listen to if you want!
+here are a couple of tracks you should listen to!
 
 ### mario maker 2 ocremix
 
@@ -57,7 +64,7 @@ this is maybe the most ambitious track on my 2021 album "the longest time". feat
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1059798865&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
-## other stuff
+## my compilations
 
 [cover ring 1]: https://www.youtube.com/watch?v=vRxfNeg3TvE "cover ring 1"
 [cover ring 2]: https://www.youtube.com/watch?v=FiC09s1ut2A "cover ring 2"
@@ -65,3 +72,14 @@ this is maybe the most ambitious track on my 2021 album "the longest time". feat
 
 
 i'm the primary organizer of maj7's every-once-in-a-while [big][cover ring 1] [cover][cover ring 2] [ring][cover ring 3]. this is a really cool event i started where everyone gets together and covers each others' tracks secretly, and we all have a listening party at the end. it's a lot of music but it's all worth a listen if you've got the time. think of it as digital fusion to study to or somethin.
+
+## my programming projects
+
+[mathquill]: https://mathquill.com "cool math input for browsers"
+[rouge]: https://github.com/rouge-ruby/rouge/
+[spct]: https://codeberg.org/jneen/spct
+[ramekin]: https://codeberg.org/jneen/ramekin
+
+* i co-wrote a very commonly used [library for web math input][mathquill], used by Desmos and others.
+* i wrote a [syntax highlighting system][rouge] that is used by github pages, gitlab, and many others.
+* i am currently attempting to revolutionize the way music is composed for Super Mario World romhacks, with [a good spc player that works on mac/linux][spct] and [a friendlier transpiler for the somewhat arcane AddmusicK format][ramekin].

@@ -3,6 +3,7 @@
 
 # build folder
 /build
+/assets
 
 # logs
 /log/
