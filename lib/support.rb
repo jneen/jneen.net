@@ -30,7 +30,7 @@ class IxlLexer < Rouge::RegexLexer
 
     rule /}/, Str, :pop!
     rule /[$]/, Str
-    rule /[^${}]*/, Str
+    rule /[^${}]+/, Str
   end
 
   state :interp do
@@ -84,7 +84,7 @@ class TulipLexer < Rouge::RegexLexer
 
     rule /}/, Str, :pop!
     rule /[$]/, Str
-    rule /[^${}]*/, Str
+    rule /[^${}]+/, Str
   end
 
   state :interp do
