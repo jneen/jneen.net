@@ -75,11 +75,11 @@ i'm the primary organizer of maj7's every-once-in-a-while [big][cover ring 1] [c
 
 ## my programming projects
 
-[mathquill]: https://mathquill.com "cool math input for browsers"
+[mathquill]: http://mathquill.com "cool math input for browsers"
 [rouge]: https://github.com/rouge-ruby/rouge/
 [spct]: https://codeberg.org/jneen/spct
 [ramekin]: https://codeberg.org/jneen/ramekin
 
-* i co-wrote a very commonly used [library for web math input][mathquill], used by Desmos and others.
+* i co-wrote a very commonly used [library for web math input][mathquill], used by Desmos and others. (note: the site still doesn't have https because we wrote it in 2010 and Han still hasn't gotten around to using LetsEncrypt...)
 * i wrote a [syntax highlighting system][rouge] that is used by github pages, gitlab, and many others.
 * i am currently attempting to revolutionize the way music is composed for Super Mario World romhacks, with [a good spc player that works on mac/linux][spct] and [a friendlier transpiler for the somewhat arcane AddmusicK format][ramekin].
