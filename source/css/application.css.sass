@@ -2,14 +2,14 @@
 @import compass/css3
 @import colors.sass
 
-@import url('http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic')
+@import url('http://fonts.googleapis.com/css?family=Atkinson+Hyperlegible:400,700,400italic,700italic')
 
-@import url('http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic')
+@import url('http://fonts.googleapis.com/css?family=Atkinson+Hyperlegible+Mono:400,700,400italic,700italic')
 
 body
-  font-family: "Ubuntu", sans-serif
-  font-size: 14pt
-  line-height: 19pt
+  font-family: "Atkinson Hyperlegible", sans-serif
+  font-size: 20px
+  line-height: 32px
   color: $unicorn
   background-color: $krasna
 
@@ -72,9 +72,12 @@ nav
     a
       text-decoration: none
       text-transform: lowercase
-      font-size: 17px
+      font-size: 23px
+      font-weight: bold
 
 article
+  strong
+    color: $dune
   header
     time
       color: $cool-as-ice
@@ -85,7 +88,7 @@ article
     color: $schrill
     text-transform: lowercase
     text-decoration: none
-    font-size: 22px
+    font-size: 28px
 
   // h1 a:visited
   //   color: $cool-as-ice
@@ -95,15 +98,20 @@ article
 
   h2
     color: $go-get-it
-    font-size: 18px
+    font-size: 27px
     margin-top: 30px
     margin-left: -6pt
 
-    &:before
-      content: "# "
+    a
+      text-decoration: none
+      &:hover:before, &:hover:after
+        color: $backlit
 
-    &:after
-      content: " #"
+      &:before
+        content: "# "
+
+      &:after
+        content: " #"
 
   .fold
     display: none
@@ -113,10 +121,66 @@ article
     padding: 15px
 
   code
-    padding: 1px
-      top: 0
-    font-family: "Ubuntu Mono", "Monaco", monospace
-    font-size: 11pt
-    border: 1px solid $cool-as-ice
+    padding: 2px
+    font-family: "Atkinson Hyperlegible Mono", "Monaco", monospace
+    font-size: 20px
+    // border: 1px solid $cool-as-ice
     background-color: $krasna
     line-height: 13pt
+
+.center
+  margin: 0 auto
+  text-align: center
+
+figcaption
+  font-size: 70%
+  margin: 0 auto
+
+blockquote
+  border: 1px solid $cool-as-ice
+  background-color: $krasna
+  padding: 0 20px
+
+mark
+  background-color: $backlit
+  color: black
+  padding: 5px
+
+p
+  text-indent: 25px
+  &:first-child, figure + &, h2 + &, blockquote + &
+    text-indent: 0
+
+sup, sub
+  vertical-align: baseline
+  position: relative
+  top: -0.4em
+  a
+    text-decoration: none
+    &:before
+      content: "["
+
+    &:after
+      content: "]"
+
+hr
+  border: none
+  border-top: 2px solid $butter3
+  margin: 40px 0
+
+.footnotes ol
+  box-sizing: border-box
+  border-radius: 5px
+  hr
+    display: none
+
+  color: $cool-as-ice
+  a
+    color: $backlit
+
+  background-color: $krasna
+  padding: 20px
+  padding-left: 50px
+
+  li:target
+    color: $aluminum1

@@ -3,9 +3,12 @@
 
 $DEBUG = false
 
+# hot reload all files in the project when this file loads
+$LOADED_FEATURES.reject! { |f| f.start_with?(__dir__) }
+
 # Haml::TempleEngine.disable_option_validator!
 
-require File.join(File.dirname(__FILE__), 'lib/blag.rb')
+require_relative 'lib/blag'
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"

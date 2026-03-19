@@ -8,7 +8,7 @@ title: jneen welcomes you to this here website
 [github]: https://github.com/jneen "jneen's github"
 [bsky]: https://bsky.app/jneen.ca
 [codeberg]: https://codeberg.org/jneen "jneen's codeberg (for current projects)"
-[gitlab]: https://gitlab.org/jneen "jneen's gitlab"
+[gitlab]: https://gitlab.com/jneen "jneen's gitlab"
 [automaphonica]: https://automaphoni.ca "a really cool label"
 [qcc]: https://queercomputerclub.ca "a really cool hackerspace"
 
@@ -79,7 +79,9 @@ i'm the primary organizer of maj7's every-once-in-a-while [big][cover ring 1] [c
 [rouge]: https://github.com/rouge-ruby/rouge/
 [spct]: https://codeberg.org/jneen/spct
 [ramekin]: https://codeberg.org/jneen/ramekin
+[declarative-policy]: https://docs.gitlab.com/development/policies/
 
 * i co-wrote a very commonly used [library for web math input][mathquill], used by Desmos and others. (note: the site still doesn't have https because we wrote it in 2010 and Han still hasn't gotten around to using LetsEncrypt...)
 * i wrote a [syntax highlighting system][rouge] that is used by github pages, gitlab, and many others.
-* i am currently attempting to revolutionize the way music is composed for Super Mario World romhacks, with [a good spc player that works on mac/linux][spct] and [a friendlier transpiler for the somewhat arcane AddmusicK format][ramekin].
+* i fixed a bunch of performance, maintainability, and security issues all in one at Gitlab with [a new declarative framework for permissions][declarative-policy], which is now [an open source library](https://gitlab.com/gitlab-org/ruby/gems/declarative-policy)
+* i am currently attempting to revolutionize the way music is composed for Super Mario World romhacks, with [a good spc player that works on mac/linux][spct] and [a friendlier transpiler for the somewhat arcane AddmusicK format][ramekin]. I also maintain [a homebrew tap](https://codeberg.org/jneen/tap) for various romhacking-related projects.

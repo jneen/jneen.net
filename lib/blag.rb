@@ -1,7 +1,8 @@
 require 'pathname'
 require 'yaml'
+require 'redcarpet'
 
-load Pathname.new(__FILE__).dirname.join('support.rb')
+require_relative 'support'
 
 module PathnameExtension
   def path_without_ext(rel=nil)
@@ -52,12 +53,10 @@ class Content
   end
 
   def source
-    @source ||= begin
-      # god damn it, just make everything UTF-8
-      contents = file.open('r:UTF-8', &:read)
-      contents.encode!('UTF-8', 'UTF-8', :invalid => :replace)
-      contents
-    end
+    # god damn it, just make everything UTF-8
+    contents = file.open('r:UTF-8', &:read)
+    contents.encode!('UTF-8', 'UTF-8', :invalid => :replace)
+    contents
   end
 
   def content
@@ -110,7 +109,7 @@ private
   # read the YAML frontmatter
   # regex stolen from Jekyll
   def parsed
-    return @parsed if instance_variable_defined? :@parsed
+    # return @parsed if instance_variable_defined? :@parsed
 
     if source =~ /^(---\s*\n.*?\n?)^(---\s*$\n?)/m
       { metadata: YAML.load($1), content: $' }
@@ -144,6 +143,7 @@ class BlogPost < Content
   end
 
   def published?
+    return published_at
     published_at && published_at < Time.now
   end
 
@@ -207,6 +207,21 @@ module Renderer
     # syntax highlighting
     require 'rouge/plugins/redcarpet'
     include Rouge::Plugins::Redcarpet
+
+    def link(url, title, content)
+      if url.start_with?('/')
+        %(<a href=#{url.inspect} title=#{title.inspect}>#{content}</a>)
+      else
+        %(<a target=_blank href=#{url.inspect} title=#{title.inspect}>#{content}</a>)
+      end
+    end
+
+    def header(text, header_level)
+      return super if header_level >= 4
+      id = text.gsub(/\s+/, '-').downcase.gsub(/[^a-z-]/, '')
+
+      return %(<h#{header_level} id=#{id.inspect}><a href="##{id}">#{text}</a></h#{header_level}>)
+    end
   end
 
   def html(source, format)
@@ -229,7 +244,9 @@ module Renderer
 private
   def markdown
     @markdown ||= Redcarpet::Markdown.new(html_renderer,
-      fenced_code_blocks: true
+      fenced_code_blocks: true,
+      footnotes: true,
+      highlight: true,
     )
   end
 
