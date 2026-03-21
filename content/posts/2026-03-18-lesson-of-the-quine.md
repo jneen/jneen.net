@@ -69,7 +69,7 @@ As for **Predictability**, the Quine Programmer has not even considered it. In t
 
 </figure>
 
-Similary, **Discoverability** may have been overlooked by the Quine Programmer, who typically is not known to write extensive documentation. Just read the code! Languages that fail on this point tend to be plagued with copy-paste and programming by superstition.
+Similary, **Discoverability** may have been overlooked by the Quine Programmer, who typically is not known to write extensive documentation. Just read the code! Languages that fail on this point tend to be plagued with copy-paste code, slightly modified each time, a result of users' fear of venturing off the well-illuminated beaten path.
 
 The Quine Programmer has also likely overlooked another important discovery feature: *error messages*. It is vitally important that the system respond in a helpful way when given invalid input. Users rely on these messages (among other things) to correct mistakes and develop a clear mental model of the language.
 
