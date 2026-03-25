@@ -21,7 +21,7 @@ date: 18 March 2026
   <figcaption>A full-page ad for The Last One software system, post-processed with various effects by me.[^last-one] <br><a href="https://archive.org/details/byte-magazine-1981-08/page/n209/mode/2up" target=_blank>BYTE magazine Aug. 1981, pg. 196</a>
 </figure>
 
-I was recently shocked to learn that [The Daily WTF](https://thedailywtf.com) is still running after all these years. It seems like such a time capsule now, programmers making fun of the absolute nonsense they encounter in the field - marvel at the [24 nested stringReplace calls](https://thedailywtf.com/articles/A-Spacy-Problem)! Watch [The PHP God](https://thedailywtf.com/articles/Divine-by-Zero) non-deterministically divide by zero! To me it evokes an era of IRC channels, PHP, subversion, and logging into the production server to update the code. Simpler times. These days it's a lot of very obtuse React.
+I was recently shocked to learn that [The Daily WTF](https://thedailywtf.com) is still running after all these years. It seems like such a time capsule now; programmers making fun of the absolute nonsense they encounter in the field. Marvel at the [24 nested stringReplace calls](https://thedailywtf.com/articles/A-Spacy-Problem)! Watch [The PHP God](https://thedailywtf.com/articles/Divine-by-Zero) non-deterministically divide by zero! To me it evokes an era of IRC channels, PHP, subversion, and logging into the production server to update the code. Simpler times. These days it's a lot of very obtuse React.
 
 There is one snippet from that time that really stuck in my brain though. It reached above the nonsense layer and into the philosophical. And that is the story of [The Quine Programmer](https://thedailywtf.com/articles/the-quine-programmer). It's a very short read, go take a look, I'll wait.
 
@@ -35,7 +35,7 @@ And what makes Python better than The Quine Programmer's monster?
 
 <!--fold-->
 
-I think most folks I know who work on and write about programming languages would say that broadly speaking these systems all represent a type of programming[^turing-complete-2]. There are some design considerations all these systems have in common, and it is a design space I enjoy thinking about.
+I think most folks I know who work on and write about programming languages would say that broadly speaking these systems all represent a type of programming.[^turing-complete-2] There are some design considerations all these systems have in common, and it is a design space I enjoy thinking about.
 
 In some sense that I hope to make a bit more concrete, Python and your favourite programming language have more *respect* for the interaction between the user and the computer, allowing each to do what they do best. Every modern high-level language is built on a mountain of abstractions, but to some extent they actually free you from thinking about it most of the time, allowing you to work with simplified mental models that make using it easier, clearer, and more fun.
 
@@ -53,13 +53,13 @@ This is pretty close to the definition from [my clojure/west talk 10 years ago][
 
 And for those versed in certain languages, evaluating a tool by the possible shapes of its inputs should feel fairly familiar - the shape of the input determines the utility of the output. Just as an if/else inside a loop might be a parser, the moment you are handling arbitrarily complex input is perhaps the moment you should ask "Am I the Quine Programmer?"[^reddit]
 
-What I think more strongly stands the test of time[^test-of-time], though, are the **general design goals of a computer language** that I presented:
+What I think more strongly stands the test of time,[^test-of-time] though, are the **general design goals of a computer language** that I presented:
 
 > 1. *Interpretation*. The computer must be able to interpret valid input and reject invalid input.
 > 2. *Predictability*. The user must be able to understand the *way* in which the computer will interpret their input.
 > 3. *Discoverability*. The user must be able to express new goals within the constraints of the system.
 
-The Quine programmer is quite satisfied with their performance on **Interpretation**. Give it a valid input, and the system will work just fine! Perhaps they haven't thought through the feedback loop for invalid input particularly well, and perhaps there are some corners the users would be surprised to know about, but to the Quine Programmer's mind these are simply part of the spec. Every bug a feature.
+The Quine Programmer is quite satisfied with their performance on **Interpretation**. Give it a valid input, and the system will work just fine! Perhaps they haven't thought through the feedback loop for invalid input particularly well, and perhaps there are some corners the users would be surprised to know about, but to the Quine Programmer's mind these are simply part of the spec. Every bug a feature.
 
 As for **Predictability**, the Quine Programmer has not even considered it. In their mind the implementation *is* the mental model. But their users, who almost as a rule are *not* familiar with the implementation, will absolutely struggle to use the system if they cannot reasonably predict its behaviour. Any bozo can write `display: flex` in a CSS file, but there is no meaning to this action unless you have a mental model of *what it will do*. Systems with low predictability leave users with a complicated guess-and-check workflow that relies mostly on [superstition][].
 
@@ -89,13 +89,13 @@ See, the design goals we've talked about aren't just applicable to quine systems
 
 ==From my perspective, AI is an incredibly poorly designed computer language.==
 
-Actually that may not quite be fair, as AI systems excel at discoverability. By design, it is certainly very easy to use an AI system. Those who believe in the existence of "prompting skill" may have one or two tips and tricks for saving tokens and discouraging certain classes of errors, but ultimately communicating with a machine in natural language takes an extremely minimal amount of knowledge or training. It's all right there, willing to explain anything you ask. The issue is that the designers seem to have forgotten the rest of it - what discoverability is *for*.
+Actually, that may not quite be fair, as AI systems excel at discoverability. By design, it is certainly "easy" to use an AI system. Those who believe in the existence of "prompting skill" may have one or two tips and tricks for saving tokens and discouraging certain classes of errors, but ultimately communicating with a machine in natural language takes an extremely minimal amount of knowledge or training. It's all right there, willing to explain anything you ask, factual accuracy be damned. The issue is that the designers seem to have forgotten the rest of it: what discoverability is *for*.
 
 Whether an AI system can interpret valid input is a topic of contentious debate (and I don't think we should accept "sometimes" as an answer here), but it is *very* clear to me that AI systems are not capable of rejecting invalid input, at least not consistently.[^latest] One could even ask whether there *is* a distinction between valid and invalid input for an AI system.
 
 Natural language is slippery, full of weird regionalisms and self-negatives and overlapping meanings and context dependence that make the process of interpretation extremely error-prone, even for a theoretically perfect system. As [Dijkstra famously argued][dijkstra], the use of formal symbols for logical and technical tasks historically represented a major breakthrough, and is one we should not let slip lightly.
 
-But the complete abject failure of AI systems lies mainly in predictability. The scale of the data set means that there is simply no way for users to develop a mental model of its operation - to even guess as to the nature of the interpretation of a given input. **We have automated the Peter Griffin Struggles With Venetian Blinds workflow on our codebases and our users.**
+But the complete abject failure of AI systems lies mainly in predictability. The scale of the data set means that there is simply no way for users to develop a mental model of its operation, or to even guess as to the nature of the interpretation of a given input. **We have automated the Peter Griffin Struggles With Venetian Blinds workflow on our codebases and our users.**
 
 To be fair to the users though, they do in fact end up constructing a mental model of their interactions with an AI. The problem is it's dangerously wrong.
 
@@ -111,7 +111,7 @@ The language in it is admittedly a bit dated and certainly dense, but it is surp
 
 This is not, as is the impression I fear so many walk away with, some problem limited to some gullible secretary complaining to a computer program about her boyfriend[^boyfriend]. We are not as different from her or my friend from high school as maybe we would like to imagine. In fact, Weizenbaum cites professional psychiatrists declaring the program to be the future of their field, and even Carl Sagan himself chimed in to offer a rosy vision of a future where therapy was administered coldly through arrays of computer terminals. **You are not immune to the ELIZA effect!**
 
-For a more modern example - from about 2014 to 2017, I ran a twitter bot trained on my tweets, called @jneebooks, which was a [popular trend at the time][horse-ebooks]. I don't quite remember if I ended up using an off-the-shelf thing or the *very* naive 3-word Markov model I was tinkering with. But I remember why I stopped running it: a friend of mine from high school thought I was trying to break into the ebooks market, and had an entire conversation with it, mistaking it for me. And then when I told him it was a bot he *didn't believe me*.
+As more modern example, from about 2014 to 2017, I ran a twitter bot trained on my tweets, called @jneebooks, which was a [popular trend at the time][horse-ebooks]. I don't quite remember if I ended up using an off-the-shelf thing or the *very* naive 3-word Markov model I was tinkering with. But I remember why I stopped running it: a friend of mine from high school thought I was trying to break into the ebooks market, and had an entire conversation with it, mistaking it for me. And then when I told him it was a bot he *didn't believe me*.
 
 [horse-ebooks]: https://en.wikipedia.org/wiki/Horse_ebooks "Wikipedia on @horse_ebooks"
 
@@ -132,7 +132,7 @@ In art coding, there is a constant struggle to maintain order over chaotic syste
 
 The reason I bring this up is twofold. First, because I anticipate objections to "Predictability" based on the fact that programmers use noise and randomness all the time, and I want to establish that predictability is in fact key to working with noise.
 
-The second reason is that **tuned noise is legitimately a decent application of AI models**, (including GPT!) - learning models themselves are, in fact, one important variation on tuned noise. This isn't just my opinion - LLM researcher Andrej Karpathy explains in the annotations for [microgpt][]:[^random]
+The second reason is that **tuned noise is legitimately a decent application of AI models**, (including GPT!). Machine learning models themselves are, in fact, one important variation on tuned noise. This isn't just my opinion - LLM researcher Andrej Karpathy explains in the annotations for [microgpt][]:[^random]
 
 > The [GPT] model is a big math function that maps input tokens to a probability distribution over the next token.
 
