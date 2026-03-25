@@ -3,7 +3,8 @@
 %html
   %head
     %meta(charset="UTF-8")
-    %link(rel="stylesheet" type="text/css" href="/css/application.css")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %link(rel="stylesheet" type="text/css" href="/css/main.css")
     %link(rel="stylesheet" type="text/css" href="/css/code.css")
     %script(type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js")
     %script(type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js')
@@ -17,7 +18,6 @@
     #container
       %h1
         %a(href="/")= Site[:title]
-      %section= yield
       %nav
         %menu
           - Links.each do |link|
@@ -26,10 +26,11 @@
                 %a{href:link.href, target:link.target}= link.name
               - else
                 %a{href:link.href}= link.name
-      .ko-fi
-        :javascript
-          kofiwidget2.init('Support my art', '#72a4f2', 'M4M3KG4QU')
-          kofiwidget2.draw();
+          %li.ko-fi
+            :javascript
+              kofiwidget2.init('Support my art', '#72a4f2', 'M4M3KG4QU')
+              kofiwidget2.draw();
+      %section= yield
 
       %footer
         All content &copy; #{Site[:author]}.

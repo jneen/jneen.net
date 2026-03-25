@@ -10,3 +10,6 @@
 
 # bundler binstubs
 /bin
+
+# stuff
+out.*

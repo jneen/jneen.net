@@ -94,5 +94,6 @@ redirect 'talks/strangeloop-2016/index.html', to: 'https://www.youtube.com/watch
 redirect 'talks/clojure-west-2015/index.html', to: 'https://www.youtube.com/watch?v=i1KVwoE3n28'
 redirect 'talks/clojure-conj-2014/index.html', to: 'https://www.youtube.com/watch?v=ZQkIWWTygio'
 redirect 'talks/skeleton-trees/index.html', to: 'https://www.youtube.com/watch?v=53Dp0-9Afi4'
+redirect 'pages/cv/index.html', to: 'https://docs.google.com/document/d/1z9PLMbwL3rfNil07c30bCrW6vufy1TtV-pRTBnXwoos/edit'
 
 

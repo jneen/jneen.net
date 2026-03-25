@@ -1,15 +1,16 @@
 ---
 links:
-  - name: Home
+  - name: home
     href: /
 
-  - name: CV / Resumé
+  - name: hire me
     href: /pages/cv
+    target: _blank
 
   - name: discord
     href: https://discord.gg/ctdn8Zbx2f
     target: _blank
 
-  - name: Blag
+  - name: blag
     href: /blag
 ---

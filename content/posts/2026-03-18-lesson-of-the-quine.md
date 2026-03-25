@@ -4,7 +4,7 @@ date: 18 March 2026
 ---
 
 <figure class="center">
-  <img src="/images/last-one.png" style="width: 50%;" title="
+  <img src="/images/last-one.png" style="max-width: calc(min(500px, 100%));" title="
     ALL THE PROGRAMS YOU'LL EVER NEED. FOR $600.
     Say goodbye to the costs and frustrations associated with writing software: The Last One(R) will be available very soon.
     More comprehensive and advanced than anything else in existence, The Last One(R) is a computer program that writes computer programs. Programs that work first time, every time.
@@ -18,14 +18,14 @@ date: 18 March 2026
     D.J. 'A.I.' Systems Ltd., Ilminster, Somerset, TA19 9BQ. England
     Telephone: 04605-4117. Telex: 46338 ANYTYR G.
   "/>
-  <figcaption>A full-page ad for The Last One software system, post-processed with various effects by me.[^last-one] <br><a href="https://archive.org/details/byte-magazine-1981-08/page/n209/mode/2up" target=_blank>BYTE magazine Aug. 1981, pg. 196</a>
+  <figcaption>A full-page ad for The Last One software system, post-processed with various effects by me. <br><a href="https://archive.org/details/byte-magazine-1981-08/page/n209/mode/2up" target=_blank>BYTE magazine Aug. 1981, pg. 196</a>
 </figure>
 
 I was recently shocked to learn that [The Daily WTF](https://thedailywtf.com) is still running after all these years. It seems like such a time capsule now; programmers making fun of the absolute nonsense they encounter in the field. Marvel at the [24 nested stringReplace calls](https://thedailywtf.com/articles/A-Spacy-Problem)! Watch [The PHP God](https://thedailywtf.com/articles/Divine-by-Zero) non-deterministically divide by zero! To me it evokes an era of IRC channels, PHP, subversion, and logging into the production server to update the code. Simpler times. These days it's a lot of very obtuse React.
 
-There is one snippet from that time that really stuck in my brain though. It reached above the nonsense layer and into the philosophical. And that is the story of [The Quine Programmer](https://thedailywtf.com/articles/the-quine-programmer). It's a very short read, go take a look, I'll wait.
+There is one snippet from that time that really stuck in my brain though. It reached above the nonsense layer and into the philosophical. And that is the story of [The Quine Programmer][quine-programmer]. It's a very short read, go take a look, I'll wait.
 
-See, unlike the typical inanity and wacky code snippets of the site, the Quine Programmer, and the Quine System they create, get at a very fundamental question:
+See, unlike the typical inanity and wacky code snippets of the site, the Quine Programmer, and the Quine System they create, get at some very fundamental questions about programming. Though it's not technically a quine - that would require producing the actual program's source code - the so-called Quine Programmer has built a system that can do just about anything, given the right configuration. And he's presumably built it using a programming language, which is a system that can do just about anything, given the right code. So naturally we have to ask:
 
 > **What is the difference between a System that Can Do Anything and, say, Python?**
 
@@ -33,7 +33,14 @@ At what point can the user of a system be considered programming? Is Excel a pro
 
 And what makes Python better than The Quine Programmer's monster?
 
-<!--fold-->
+<figure class="center">
+  <img src="/images/quine-workflow.png" style="width: 75%;" title="
+    An absolutely incomprehensible crow's nest of labeled boxes and arrows, presumably describing some workflow.
+  "/>
+  <figcaption>
+    The Quine Programmer's monster.<br/>As shown in <a href="https://thedailywtf.com/articles/the-quine-programmer">&ldquo;The Quine Programmer&rdquo; on The Daily WTF</a>.
+  </figcaption>
+</figure>
 
 I think most folks I know who work on and write about programming languages would say that broadly speaking these systems all represent a type of programming.[^turing-complete-2] There are some design considerations all these systems have in common, and it is a design space I enjoy thinking about.
 
@@ -55,9 +62,9 @@ And for those versed in certain languages, evaluating a tool by the possible sha
 
 What I think more strongly stands the test of time,[^test-of-time] though, are the **general design goals of a computer language** that I presented:
 
-> 1. *Interpretation*. The computer must be able to interpret valid input and reject invalid input.
-> 2. *Predictability*. The user must be able to understand the *way* in which the computer will interpret their input.
-> 3. *Discoverability*. The user must be able to express new goals within the constraints of the system.
+> 1. *Interpretation*. The computer should be able to interpret valid input and reject invalid input.
+> 2. *Predictability*. The user should be able to understand the *way* in which the computer will interpret their input.
+> 3. *Discoverability*. The user should be able to express new goals within the constraints of the system.
 
 The Quine Programmer is quite satisfied with their performance on **Interpretation**. Give it a valid input, and the system will work just fine! Perhaps they haven't thought through the feedback loop for invalid input particularly well, and perhaps there are some corners the users would be surprised to know about, but to the Quine Programmer's mind these are simply part of the spec. Every bug a feature.
 
@@ -66,7 +73,7 @@ As for **Predictability**, the Quine Programmer has not even considered it. In t
 [superstition]: https://utcc.utoronto.ca/~cks/space/blog/programming/ProgrammingViaSuperstition "Chris Siebenmann - A significant amount of programming is done by superstition"
 
 <figure class="center">
-  <img style="max-width: 480px" src="/images/family-guy-css.gif" title="Classic GIF of Peter Griffin struggling with Venetian blinds, captioned 'CSS'" />
+  <img style="max-width: calc(min(100%, 480px))" src="/images/family-guy-css.gif" title="Classic GIF of Peter Griffin struggling with Venetian blinds, captioned 'CSS'" />
   <figcaption>A dated meme, but one that encapsulates the &ldquo;try it and see if it works&rdquo; feeling I remember from trying to make a site look right in IE6.</figcaption>
 
 </figure>
@@ -74,6 +81,10 @@ As for **Predictability**, the Quine Programmer has not even considered it. In t
 Similary, **Discoverability** may have been overlooked by the Quine Programmer, who typically is not known to write extensive documentation. Just read the code! Languages that fail on this point tend to be plagued with copy-paste code, slightly modified each time, a result of users' fear of venturing off the well-illuminated beaten path.
 
 The Quine Programmer has also likely overlooked another important discovery feature: *error messages*. It is vitally important that the system respond in a helpful way when given invalid input. Users rely on these messages (among other things) to correct mistakes and develop a clear mental model of the language.
+
+In fact, [Peter Naur argued in 1985][theory-building-view] that that the programmer's mental model of the language is closer to the point of programming than the execution of code:
+
+> [I]t is concluded that the proper, primary aim of programming is, not to produce programs, but to have the programmers build theories of the manner in which the problems at hand are solved by program execution.
 
 These design goals all share a common thread, which is enabling a user to communicate and do cool things with a computer in a way that empowers them, allows them to think in higher-level terms, without leaving them lost and confused. They're principles of user empowerment nearly identical to those that UX designers think about every day.
 
@@ -87,7 +98,7 @@ See, the design goals we've talked about aren't just applicable to quine systems
 
 [invented-things]: https://github.blog/changelog/2026-03-17-secret-scanning-in-ai-coding-agents-via-the-github-mcp-server/ "Github Blog: Secret Scanning in AI Coding Agents Via the Github MCP Server"
 
-==From my perspective, AI is an incredibly poorly designed computer language.==
+==From my perspective, AI can be seen as an incredibly poorly designed computer language.==
 
 Actually, that may not quite be fair, as AI systems excel at discoverability. By design, it is certainly "easy" to use an AI system. Those who believe in the existence of "prompting skill" may have one or two tips and tricks for saving tokens and discouraging certain classes of errors, but ultimately communicating with a machine in natural language takes an extremely minimal amount of knowledge or training. It's all right there, willing to explain anything you ask, factual accuracy be damned. The issue is that the designers seem to have forgotten the rest of it: what discoverability is *for*.
 
@@ -101,15 +112,15 @@ To be fair to the users though, they do in fact end up constructing a mental mod
 
 ## The AI User's Actual Mental Model
 
-Most computer science folks these days are familiar with [ELIZA][], the 1960s chatbot that famously convinced users they were talking to a real person, passing the Turing Test with flying colours by mere social engineering. Fewer, I think, have read ELIZA author Joseph Weizenbaum's excellent book [Computer Power and Human Reason][cphr] on the topic. I managed to find a hard-copy - it has one of those old cardboard-ey bindings and smells like my grandmother's bookshelf.
+Most computer science folks these days are familiar with [ELIZA][], the 1960s chatbot that famously convinced users they were talking to a real person, passing the Turing Test with flying colours by mere social engineering. Fewer, I think, have read ELIZA author Joseph Weizenbaum's excellent book [Computer Power and Human Reason][cphr] on the topic. I recently managed to find a hard-copy - it has one of those old cardboard-ey bindings and smells like my grandmother's bookshelf.
 
-The language in it is admittedly a bit dated and certainly dense, but it is surprisingly prescient for today's world. Here's how Weizenbaum describes a user developing a mental model of a natural language system:
+The language in it is admittedly a bit dated and certainly dense, but it is surprisingly prescient for today's world. Here's how Weizenbaum describes a user developing a mental model of a natural language system like ELIZA (pg. 15):
 
 [ELIZA]: https://en.wikipedia.org/wiki/ELIZA_effect "Wikipedia: ELIZA effect"
 
-> So, unless they are capable of very great skepticism (the kind we bring to bear while watching a stage magician), they can explain the computer's intellectual feats only by bringing to bear the single analogy available to them, that is, their model of their own capacity to think. [pg. 15]
+> So, unless they are capable of very great skepticism (the kind we bring to bear while watching a stage magician), they can explain the computer's intellectual feats only by bringing to bear the single analogy available to them, that is, their model of their own capacity to think.
 
-This is not, as is the impression I fear so many walk away with, some problem limited to some gullible secretary complaining to a computer program about her boyfriend[^boyfriend]. We are not as different from her or my friend from high school as maybe we would like to imagine. In fact, Weizenbaum cites professional psychiatrists declaring the program to be the future of their field, and even Carl Sagan himself chimed in to offer a rosy vision of a future where therapy was administered coldly through arrays of computer terminals. **You are not immune to the ELIZA effect!**
+This is not, as is the impression I fear so many walk away with, some problem limited to some gullible secretary complaining to a computer program about her boyfriend[^boyfriend]. We are not as different from her or my friend from high school as maybe we would like to imagine. In fact, Weizenbaum cites professional psychiatrists declaring the program to be the future of their field, and even Carl Sagan himself chimed in to offer a rosy vision of a future where therapy was administered coldly through arrays of computer terminals.[^sagan] **You are not immune to the ELIZA effect!**
 
 As more modern example, from about 2014 to 2017, I ran a twitter bot trained on my tweets, called @jneebooks, which was a [popular trend at the time][horse-ebooks]. I don't quite remember if I ended up using an off-the-shelf thing or the *very* naive 3-word Markov model I was tinkering with. But I remember why I stopped running it: a friend of mine from high school thought I was trying to break into the ebooks market, and had an entire conversation with it, mistaking it for me. And then when I told him it was a bot he *didn't believe me*.
 
@@ -138,7 +149,7 @@ The second reason is that **tuned noise is legitimately a decent application of 
 
 And naturally, this is generally the productive use to which not-quite-as-large learning models [have been put][spam] [for some time][speedtree]. I think it's fair to say that presuming local models, ethical training, and the retention of some manner of creative control,[^big] there is not much to object to with this use case.[^price]
 
-But in the field of programming itself, there are already so many natural sources of unpredictability that introducing more sources, especially when their behaviour is not well understood, is an unnecessary sacrifice of creative control. Sure, it can enable you to make *more code*, but that's [unlikely to be better or more reliable][github-status].
+But critically: in all these cases, the noise is in the *output*, rather than the *interface*. In the field of programming itself, there are already so many natural sources of unpredictability that introducing more sources, especially when their behaviour is not well understood, is an unnecessary sacrifice of creative control. Sure, it can enable you to make *more code*, but that's [unlikely to be better or more reliable][github-status].
 
 ## Conclusion
 
@@ -175,7 +186,6 @@ Maybe the next time I want a random answer that I can't tell is right I'll ask T
 
 [baldur]: https://softwarecrisis.dev/letters/llmentalist/ "LLMentalist by Baldur Bjarnason"
 
-
 [the-last-one]: https://en.wikipedia.org/wiki/The_Last_One_(software) "The Last One"
 [cphr]: https://archive.org/details/computerpowerhum0000weiz_v0i3 "Computer Power and Human Reason by Joseph Weizenbaum"
 [dijkstra]: https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667.html
@@ -184,7 +194,11 @@ Maybe the next time I want a random answer that I can't tell is right I'll ask T
 
 [^turing-complete-2]: ...with the caveat that sometimes "programming" is implied to be in a *Turing complete* system, or even more specifically an *imperative* one, and this ambiguity is also part of why I prefer "computer language". I'm including things like HTML and CSS here, as they also have these kinds of design considerations.
 
-[^test-of-time]: with some modifications, which may be a bit unfair of me
+[^test-of-time]: ...with some modifications, which may be a bit unfair of me.
+
+[^theory]: I only learned about this paper a few days ago, and am extremely pleased that Naur proposes something fairly close to my 3 design goals here. Maybe I should feel validated, maybe this is a bit of recycled discourse. I'm pretty happy with it though. Maybe it deserves a bit of recycling right now.
+
+[theory-building-view]: https://ingenieria-de-software-i.github.io/assets/bibliografia/programming-as-theory-building.pdf "Programming As Theory Building. Peter Naur, Microprocessing and Programming 15, 1985, p. 253-261"
 
 [^definition-grey-area]: There's some grey area around creative tools like Photoshop or your average DAW (which these days tend to have programming-like systems built in anyways).
 
@@ -203,3 +217,13 @@ Maybe the next time I want a random answer that I can't tell is right I'll ask T
 [^price]: except maybe the price, SpeedTree is notoriously expensive.
 
 [^abstraction]: some going so far as to claim having invented the concept of abstraction itself!
+
+[quine-programmer]: https://thedailywtf.com/articles/the-quine-programmer "The Daily WTF, &ldquo;The Quine Programmer&rdquo;"
+
+[^sagan]: The article, "In Praise of Robots" from Natural History Jan 1975 is, naturally, paywalled. But here's a [Forbes article][forbes-sagan] discussing it, which contains the same quote Weizenbaum pulled in his book. As you might expect, this version of Sagan is quoted extensively by AI proponents and AGI[^pseudoscience] true believers.
+
+[^pseudoscience]: It's also important to note that [AGI is pseudoscience][pseudo].
+
+[pseudo]: https://www.baldurbjarnason.com/2023/beware-of-ai-snake-oil/ "Baldur Bjarnason, &ldquo;Beware of AI pseudoscience and snake oil&rdquo;"
+
+[forbes-sagan]: https://www.forbes.com/sites/lanceeliot/2024/07/11/surprising-outcome-of-carl-sagans-famous-1975-prediction-about-ai-becoming-your-attentive-psychotherapist/ "Surprising Outcome Of Carl Sagan's Famous 1975 Prediction About AI Becoming Your Attentive Psychotherapist, Forbes Magazine, 2024 Jul 11."
