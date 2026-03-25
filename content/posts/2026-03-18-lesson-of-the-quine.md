@@ -37,6 +37,8 @@ And what makes Python better than The Quine Programmer's monster?
 
 I think most folks I know who work on and write about programming languages would say that broadly speaking these systems all represent a type of programming[^turing-complete-2]. There are some design considerations all these systems have in common, and it is a design space I enjoy thinking about.
 
+In some sense that I hope to make a bit more concrete, Python and your favourite programming language have more *respect* for the interaction between the user and the computer, allowing each to do what they do best. Every modern high-level language is built on a mountain of abstractions, but to some extent they actually free you from thinking about it most of the time, allowing you to work with simplified mental models that make using it easier, clearer, and more fun.
+
 So, how do we do better than the Quine Programmer? How can we connect the dots between human user and computer in a way that respects the strengths of both?
 
 ## Computer Language Design
@@ -73,17 +75,21 @@ Similary, **Discoverability** may have been overlooked by the Quine Programmer, 
 
 The Quine Programmer has also likely overlooked another important discovery feature: *error messages*. It is vitally important that the system respond in a helpful way when given invalid input. Users rely on these messages (among other things) to correct mistakes and develop a clear mental model of the language.
 
+These design goals all share a common thread, which is enabling a user to communicate and do cool things with a computer in a way that empowers them, allows them to think in higher-level terms, without leaving them lost and confused. They're principles of user empowerment nearly identical to those that UX designers think about every day.
+
 So that's a fun little philosophical exercise from 10 years ago, based on a satirical blog post from 15 years ago. But this is 2026, so I think we all know where this is going.
 
 ## Evaluating AI as a computer language
 
 This beef isn't new for me. I was getting into embarrassing online arguments with AI people on exactly these points as far back as 2014. Perhaps I should have written about them more.
 
-See, the design goals we've talked about aren't just applicable to quine systems or computer languages, but more generally to how I feel it is appropriate to design a tool facilitating communication between a human user and a computer. Any AI system that communicates with a user in natural language *certainly* meets our computer language definition above, and so I feel fairly justified in judging it by the same criteria.
+See, the design goals we've talked about aren't just applicable to quine systems or computer languages, but more generally to how I feel it is appropriate to design a tool facilitating communication between a human user and a computer. Any AI system that communicates with a user in natural language *certainly* meets our computer language definition above, and so I feel fairly justified in judging it by the same criteria. Also, AI marketing keeps [claiming it has invented things][invented-things][^abstraction] that compilers, linters, formatters, and all manner of language tools have been doing for decades.
+
+[invented-things]: https://github.blog/changelog/2026-03-17-secret-scanning-in-ai-coding-agents-via-the-github-mcp-server/ "Github Blog: Secret Scanning in AI Coding Agents Via the Github MCP Server"
 
 ==From my perspective, AI is an incredibly poorly designed computer language.==
 
-Actually that may not quite be fair, as AI systems excel at discoverability. By design, it is certainly very easy to use an AI system. Those who believe in the existence of "prompting skill" may have one or two tips and tricks for saving tokens and preventing certain classes of errors, but ultimately communicating with a machine in natural language takes an extremely minimal amount of knowledge or training. It's all right there, willing to explain anything you ask. The issue is that the designers seem to have forgotten the rest of it - what discoverability is *for*.
+Actually that may not quite be fair, as AI systems excel at discoverability. By design, it is certainly very easy to use an AI system. Those who believe in the existence of "prompting skill" may have one or two tips and tricks for saving tokens and discouraging certain classes of errors, but ultimately communicating with a machine in natural language takes an extremely minimal amount of knowledge or training. It's all right there, willing to explain anything you ask. The issue is that the designers seem to have forgotten the rest of it - what discoverability is *for*.
 
 Whether an AI system can interpret valid input is a topic of contentious debate (and I don't think we should accept "sometimes" as an answer here), but it is *very* clear to me that AI systems are not capable of rejecting invalid input, at least not consistently.[^latest] One could even ask whether there *is* a distinction between valid and invalid input for an AI system.
 
@@ -103,9 +109,13 @@ The language in it is admittedly a bit dated and certainly dense, but it is surp
 
 > So, unless they are capable of very great skepticism (the kind we bring to bear while watching a stage magician), they can explain the computer's intellectual feats only by bringing to bear the single analogy available to them, that is, their model of their own capacity to think. [pg. 15]
 
-This is not, as is the impression I fear so many walk away with, some problem limited to some gullible secretary complaining to a computer program about her boyfriend.[^boyfriend] We are not as different from her as maybe we would like to imagine. In fact, Weizenbaum cites professional psychiatrists declaring the program to be the future of their field, and even Carl Sagan himself chimed in to offer a rosy vision of a future where therapy was administered coldly through arrays of computer terminals. **You are not immune to the ELIZA effect!**
+This is not, as is the impression I fear so many walk away with, some problem limited to some gullible secretary complaining to a computer program about her boyfriend[^boyfriend]. We are not as different from her or my friend from high school as maybe we would like to imagine. In fact, Weizenbaum cites professional psychiatrists declaring the program to be the future of their field, and even Carl Sagan himself chimed in to offer a rosy vision of a future where therapy was administered coldly through arrays of computer terminals. **You are not immune to the ELIZA effect!**
 
-And today, AI's tendency towards being anthropomorphized is not neutral. It's directly led to some of its more unsavoury effects on its users. In fact, they are arguably an [active cognitohazard][baldur]. Even presumed subject-matter experts are prone to this - just a few weeks ago a Meta AI specialist [posted herself admonishing OpenClaw for deleting her email][summer-yue], an act that assumes a computer can feel shame and correct its behaviour to avoid it.
+For a more modern example - from about 2014 to 2017, I ran a twitter bot trained on my tweets, called @jneebooks, which was a [popular trend at the time][horse-ebooks]. I don't quite remember if I ended up using an off-the-shelf thing or the *very* naive 3-word Markov model I was tinkering with. But I remember why I stopped running it: a friend of mine from high school thought I was trying to break into the ebooks market, and had an entire conversation with it, mistaking it for me. And then when I told him it was a bot he *didn't believe me*.
+
+[horse-ebooks]: https://en.wikipedia.org/wiki/Horse_ebooks "Wikipedia on @horse_ebooks"
+
+That's a fun comedy of errors, but today, AI's tendency towards being anthropomorphized is not neutral. It's directly led to some of its more unsavoury effects on its users. In fact, they are arguably an [active cognitohazard][baldur]. Even presumed subject-matter experts are prone to this - just a few weeks ago a Meta AI specialist [posted herself admonishing OpenClaw for deleting her email][summer-yue], an act that assumes a computer can feel shame and correct its behaviour to avoid it.
 
 Instead, consider this a natural result, a kind of optical illusion created by having no other reference point to fall back on. Like most optical illusions, being aware of the problem doesn't mean your perception is suddenly "fixed" - you and I are equipped with human senses that have a lot of strange flaws and corner cases, and we eventually learn to question what we see to some extent. So we can somewhat move about in a world full of [stage magic pretending to be real][llmentalist].
 
@@ -128,7 +138,7 @@ The second reason is that **tuned noise is legitimately a decent application of 
 
 And naturally, this is generally the productive use to which not-quite-as-large learning models [have been put][spam] [for some time][speedtree]. I think it's fair to say that presuming local models, ethical training, and the retention of some manner of creative control,[^big] there is not much to object to with this use case.[^price]
 
-But in the field of programming itself, there are already so many natural sources of unpredictability that introducing more sources, especially when their behaviour is not well understood, is an unnecessary sacrifice of creative control. Sure, it can enable you to make *more*, but that's [unlikely to be better or more reliable.][github-status]
+But in the field of programming itself, there are already so many natural sources of unpredictability that introducing more sources, especially when their behaviour is not well understood, is an unnecessary sacrifice of creative control. Sure, it can enable you to make *more code*, but that's [unlikely to be better or more reliable][github-status].
 
 ## Conclusion
 
@@ -143,9 +153,13 @@ Claude and other natural-language-based programming tools carry the thesis that 
 [last-one-article]: https://archive.org/details/PersonalComputerWorld1981-02/page/76/mode/1up "Archive.org: Article in Personal Computer World, Feb. 1981: &ldquo;The Last One&rdquo;"
 [last-one-wiki]: https://en.wikipedia.org/wiki/The_Last_One_(software) "The Last One (Wikipedia)"
 
-When a tool is unreliable, completely resists mental-modeling, is incapbable of consistently rejecting invalid input, and acts as [an active cognitohazard][baldur] to boot, I think it's reasonable to say it's not fit for purpose. Maybe the next time I want an indeterminate answer that I can't tell is right I'll ask The PHP God.[^god]
+I'm no nihilist though. I think the art of programming survives the coming AI winter. I think there's going to be quite a lot of work to do to clean up the mess we've made for ourselves. But I have a deep love for a good mess, it means there's still work to do. Learn a new programming language this year. Heck, mock one up yourself!
 
-[github-status]: https://mrshu.github.io/github-statuses/ "Github's absolutely shameful (at time of writing) uptime stats. 90%."
+The ultimate fate of AI programming in the long run, I think, is not far from The Last One. When a programming tool is unreliable, completely resists mental-modeling, is incapbable of consistently rejecting invalid input, and acts as [an active cognitohazard][baldur] to boot, I think it's reasonable to say it's not fit for purpose.
+
+Maybe the next time I want a random answer that I can't tell is right I'll ask The PHP God.[^god]
+
+[github-status]: https://mrshu.github.io/github-statuses/ "Github's absolutely shameful (at time of writing) uptime stats. 90%. Yeesh."
 
 [spam]: https://www.cs.utep.edu/mhossain/papers/trainable.pdf "An early-ish paper on ML approaches for spam detection"
 [speedtree]: https://unity.com/products/speedtree "Unity SpeedTree - games industry standard tree generator"
@@ -187,3 +201,5 @@ When a tool is unreliable, completely resists mental-modeling, is incapbable of 
 [^big]: these are *very big presumptions*
 
 [^price]: except maybe the price, SpeedTree is notoriously expensive.
+
+[^abstraction]: some going so far as to claim having invented the concept of abstraction itself!
