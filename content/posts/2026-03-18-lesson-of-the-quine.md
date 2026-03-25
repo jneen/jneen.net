@@ -18,7 +18,7 @@ date: 18 March 2026
     D.J. 'A.I.' Systems Ltd., Ilminster, Somerset, TA19 9BQ. England
     Telephone: 04605-4117. Telex: 46338 ANYTYR G.
   "/>
-  <figcaption>A full-page ad for The Last One software system, post-processed with various effects by me. <br><a href="https://archive.org/details/byte-magazine-1981-08/page/n209/mode/2up" target=_blank>BYTE magazine Aug. 1981, pg. 196</a>
+  <figcaption>A full-page ad for The Last One software system, post-processed with various effects by me.[^last-one] <br><a href="https://archive.org/details/byte-magazine-1981-08/page/n209/mode/2up" target=_blank>BYTE magazine Aug. 1981, pg. 196</a>
 </figure>
 
 I was recently shocked to learn that [The Daily WTF](https://thedailywtf.com) is still running after all these years. It seems like such a time capsule now, programmers making fun of the absolute nonsense they encounter in the field - marvel at the [24 nested stringReplace calls](https://thedailywtf.com/articles/A-Spacy-Problem)! Watch [The PHP God](https://thedailywtf.com/articles/Divine-by-Zero) non-deterministically divide by zero! To me it evokes an era of IRC channels, PHP, subversion, and logging into the production server to update the code. Simpler times. These days it's a lot of very obtuse React.
@@ -111,24 +111,55 @@ Instead, consider this a natural result, a kind of optical illusion created by h
 
 [llmentalist]: https://softwarecrisis.dev/letters/llmentalist/ "Baldur Bjarnason: The LLMentalist Effect"
 
-## Tuned Noise
+## Aside on Tuned Noise
 
-"but what about getting it 95% right" -- need to finish this section
+In the last few years I've been getting a bit into [shader programming][shadertoy]. Despite being decidedly mediocre at it, the act of programming this way has been very therapeutic for me. Demoscene-style shaders are optimized for live-coding in [competitive 25-minute demo battles][shader-showdown], meaning memorization and quick typing are much more desirable traits in a design than future-proofing or even readability.
 
-talk about shaders / perlin noise
+[shadertoy]: https://shadertoy.com/user/jneen "my humble shadertoy profile"
+[shader-showdown]: https://www.youtube.com/watch?v=NBdRfFwuP40 "the real pros at work"
 
-actually a legitimate application in some ways, used responsibly
+In art coding, there is a constant struggle to maintain order over chaotic systems. Good graphics programmers and artists know [how to use noise and unpredictability to their advantage][perlin-noise], while retaining predictability. As my dear friend and extremely accomplished shader artist [Blackle][] put it, "The only thing bad about glitches is that they [take artistic control away][artistic-control]." Noise is tricky, even in simple cases - understanding the distribution or behaviour of a noise source is critical for getting good results.
+
+The reason I bring this up is twofold. First, because I anticipate objections to "Predictability" based on the fact that programmers use noise and randomness all the time, and I want to establish that predictability is in fact key to working with noise.
+
+The second reason is that **tuned noise is legitimately a decent application of AI models**, (including GPT!) - learning models themselves are, in fact, one important variation on tuned noise. This isn't just my opinion - LLM researcher Andrej Karpathy explains in the annotations for [microgpt][]:[^random]
+
+> The [GPT] model is a big math function that maps input tokens to a probability distribution over the next token.
+
+And naturally, this is generally the productive use to which not-quite-as-large learning models [have been put][spam] [for some time][speedtree]. I think it's fair to say that presuming local models, ethical training, and the retention of some manner of creative control,[^big] there is not much to object to with this use case.[^price]
+
+But in the field of programming itself, there are already so many natural sources of unpredictability that introducing more sources, especially when their behaviour is not well understood, is an unnecessary sacrifice of creative control. Sure, it can enable you to make *more*, but that's [unlikely to be better or more reliable.][github-status]
+
+## Conclusion
+
+I care deeply about tool usability - there's much of the field of HCI that seems to be about capturing the attention of the most uninterested user, but in my opinion UX is equally important in the other ways we (even technical users!) interact with computers. I spelled out these design goals a decade ago in the hopes that maybe the industry would start taking tool design seriously. The industry's answer appears to be Claude.
+
+And it's not like the problem is new. As far back as 1981, [tech press was salivating][last-one-article] over half-baked Quine Systems like [The Last One][last-one-wiki], claiming such hogwash as "...ordinary people can implement their ideas on a computer without... having to learn to program", and "...those in the DP [data processing] industry who fail to adapt to the new approach may find themselves out of work." [By all accounts][last-one-stackoverflow], The Last One was a monstrous system to work with.
+
+[last-one-stackoverflow]: https://stackoverflow.com/questions/1293278/what-became-of-the-last-one "Stack Overflow: What became of The Last One?"
+
+Claude and other natural-language-based programming tools carry the thesis that the failure of The Last One and other older Quine Systems was primarily due to technological failures, and the capabilities of hardware at the time. **I contend the failure is in the interface.**
+
+[last-one-article]: https://archive.org/details/PersonalComputerWorld1981-02/page/76/mode/1up "Archive.org: Article in Personal Computer World, Feb. 1981: &ldquo;The Last One&rdquo;"
+[last-one-wiki]: https://en.wikipedia.org/wiki/The_Last_One_(software) "The Last One (Wikipedia)"
+
+When a tool is unreliable, completely resists mental-modeling, is incapbable of consistently rejecting invalid input, and acts as [an active cognitohazard][baldur] to boot, I think it's reasonable to say it's not fit for purpose. Maybe the next time I want an indeterminate answer that I can't tell is right I'll ask The PHP God.[^god]
+
+[github-status]: https://mrshu.github.io/github-statuses/ "Github's absolutely shameful (at time of writing) uptime stats. 90%."
+
+[spam]: https://www.cs.utep.edu/mhossain/papers/trainable.pdf "An early-ish paper on ML approaches for spam detection"
+[speedtree]: https://unity.com/products/speedtree "Unity SpeedTree - games industry standard tree generator"
+[perlin-noise]: https://stegu.github.io/webgl-noise/webdemo/ "a perlin noise implementation i referenced for one of the WIP City shaders"
+[artistic-control]: https://youtu.be/NBdRfFwuP40?si=g_XHpyZFC37UNaTY&t=3167
+[Blackle]: https://suricrasia.online/ "Suricrasia Online"
+[wave-collapse]: https://www.youtube.com/watch?v=5iSAvzU2WYY "video: Wave Function Collapse by Coding Train"
+[microgpt]: https://karpathy.github.io/2026/02/12/microgpt/#faq "microgpt by Andrej Karpathy (FAQ)"
+
 
 [summer-yue]: https://nitter.net/summeryue0/status/2025774069124399363 "Summer Yue's texts with her OpenClaw instance"
 
 
 [baldur]: https://softwarecrisis.dev/letters/llmentalist/ "LLMentalist by Baldur Bjarnason"
-
-## Conclusion
-
-(write something a bit more substantial here but i think this is a good ending paragraph)
-
-When a tool is unreliable, completely resists modeling, is incapbable of consistently rejecting invalid input, and acts as [an active cognitohazard][baldur], I think it's reasonable to say it's not fit for purpose. Maybe the next time I want an indeterminate answer that I can't tell is right I'll ask The PHP God.[^god]
 
 
 [the-last-one]: https://en.wikipedia.org/wiki/The_Last_One_(software) "The Last One"
@@ -150,3 +181,9 @@ When a tool is unreliable, completely resists modeling, is incapbable of consist
 [^latest]: I swear to god if somebody comes at me with "you just haven't used the latest model yet". We've heard this before. Non-determinism is inherent to the design.
 
 [^boyfriend]: Honestly the fact that the "All men are the same" prompt is the chosen snippet *every time* ELIZA is brought up says something about our perception and treatment of women, and allows us to be somewhat dismissive of the ELIZA effect in ways that are super uncomfortable to think about!
+
+[^random]: Specifically, the noise that is tuned comes from three sources in microgpt (there are more in a production AI system): 1) a uniform shuffle of the training data, 2) a Gaussian distribution for the initial matrix values of each attention head, and 3) the final weighted random choice according to the trained weights during inference. The rest is all tuning!
+
+[^big]: these are *very big presumptions*
+
+[^price]: except maybe the price, SpeedTree is notoriously expensive.

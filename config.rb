@@ -5,6 +5,13 @@ $DEBUG = false
 
 # hot reload all files in the project when this file loads
 $LOADED_FEATURES.reject! { |f| f.start_with?(__dir__) }
+Object.send(:remove_const, :Content) if defined?(Content)
+Object.send(:remove_const, :BlogPost) if defined?(BlogPost)
+Object.send(:remove_const, :Page) if defined?(Page)
+Object.send(:remove_const, :Links) if defined?(Links)
+Object.send(:remove_const, :Site) if defined?(Site)
+Object.send(:remove_const, :Redirects) if defined?(Redirects)
+Object.send(:remove_const, :Renderer) if defined?(Renderer)
 
 # Haml::TempleEngine.disable_option_validator!
 
