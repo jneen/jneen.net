@@ -10,3 +10,4 @@ gem 'middleman'
 gem 'middleman-autoprefixer'
 
 gem 'pry'
+gem 'ostruct'
